@@ -28,6 +28,11 @@ body {
   margin: 0 auto;
 }
 
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @font-face {
   font-family: "PingFang SC";
   src: url("PingFangSCBold.woff2") format("woff2"), url("PingFangSCBold.woff") format("woff"), url("PingFangSCBold.ttf") format("truetype");
@@ -149,7 +154,36 @@ header nav .nav-link-group > a {
   color: #fff;
   text-decoration: none;
 }
-
+header .mega-submenu .mega-menu-sub .flex-row {
+  align-items: center;
+  gap: 60px;
+}
+header .mega-submenu .mega-menu-sub .mega-items a {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  color: var(--dark-bluesh);
+  text-decoration: none;
+}
+header .mega-submenu .mega-menu-sub .mega-items a > img {
+  margin-top: 31px;
+}
+header .mega-submenu .mega-menu-sub .mega-items a.qr-code-bg {
+  background-image: url(../img/code_container.png);
+  width: 150px;
+  height: 175px;
+  background-size: contain;
+}
+header.mega-menu-hidden .mega-submenu {
+  display: none;
+}
+header.mega-menu-hidden .mega-submenu .mega-menu-sub {
+  display: none;
+}
+header.mega-menu-hidden.mega-menu-on .mega-submenu {
+  display: block !important;
+}
 .banner-section {
   width: 100%;
   height: auto;

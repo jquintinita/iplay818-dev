@@ -30,3 +30,8 @@ body{
     display: block;
     margin: 0 auto;
 }
+
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+}

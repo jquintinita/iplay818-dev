@@ -93,4 +93,50 @@ header{
             }
         }
     }
+    .mega-submenu{
+        .mega-menu-sub{
+            .flex-row{
+                align-items: center;
+                gap: 60px;
+            }
+            .mega-items{
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    align-items: center;
+                    color: var(--dark-bluesh);
+                    text-decoration: none;
+                    > img{
+                        margin-top: 31px;
+                    }
+                    &.qr-code-bg{
+                        background-image: url(../img/code_container.png);
+                        width: 150px;
+                        height: 175px;
+                        background-size: contain;
+                    }
+                   
+                       
+                }
+                
+            }
+        }
+    }
+    &.mega-menu-hidden{
+        .mega-submenu{
+            display: none;
+            .mega-menu-sub{
+                display: none;
+            }
+        }
+        &.mega-menu-on{
+            .mega-submenu{
+                display: block !important;
+                .mega-menu-sub{
+                    
+                }
+            }
+        }
+    }
 }
