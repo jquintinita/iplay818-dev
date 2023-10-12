@@ -1,0 +1,32 @@
+//Default Styles
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --carolina-blue: #76ABD1ff;
+    --celestial-blue: #50A0D5ff;
+    --silver-lake-blue: #6289B3ff;
+    --columbia-blue: #C1DAF0ff;
+    --alice-blue: #EFF7FEff;
+    --dark-gray: #333;
+    --french-gray: #D1D6DDff;
+    --dark-bluesh:#798B9C;
+
+}
+
+body{
+    font-family: 'PingFang SC';
+    font-weight: normal;
+
+    background-color: var(--alice-blue);
+    background-image: url(../img/main-background.png);
+}
+
+.container{
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}

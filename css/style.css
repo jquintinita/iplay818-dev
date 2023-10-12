@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --carolina-blue: #76ABD1ff;
+  --celestial-blue: #50A0D5ff;
+  --silver-lake-blue: #6289B3ff;
+  --columbia-blue: #C1DAF0ff;
+  --alice-blue: #EFF7FEff;
+  --dark-gray: #333;
+  --french-gray: #D1D6DDff;
+  --dark-bluesh:#798B9C;
+}
+
+body {
+  font-family: "PingFang SC";
+  font-weight: normal;
+  background-color: var(--alice-blue);
+  background-image: url(../img/main-background.png);
+}
+
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "PingFang SC";
+  src: url("PingFangSCBold.woff2") format("woff2"), url("PingFangSCBold.woff") format("woff"), url("PingFangSCBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("PingFangSCHeavy.woff2") format("woff2"), url("PingFangSCHeavy.woff") format("woff"), url("PingFangSCHeavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("PingFangSCRegular.woff2") format("woff2"), url("PingFangSCRegular.woff") format("woff"), url("PingFangSCRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("SFProPingFangSC-Medium.woff2") format("woff2"), url("SFProPingFangSC-Medium.woff") format("woff"), url("SFProPingFangSC-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+header {
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background: #FFFFFF;
+  z-index: 999;
+}
+header nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header nav .nav-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  color: var(--dark-bluesh);
+  margin-left: 30px;
+  align-self: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  position: relative;
+  flex-grow: 1;
+}
+header nav .nav-menu .nav-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+header nav .nav-menu .nav-menu-list > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-radius: 0px 0px 3px 3px;
+}
+header nav .nav-menu .nav-menu-list > li > a {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  line-height: 25px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header nav .nav-menu .nav-menu-list > li > a > img {
+  width: 20px;
+  margin-bottom: 5px;
+}
+header nav .nav-menu .nav-menu-list > li:last-child {
+  margin-left: 90px;
+}
+header nav .nav-menu .nav-menu-list > li:hover {
+  background: transparent linear-gradient(180deg, #A6D2F7 0%, #2595F2 19%, #257EC7 77%, #32A0FA 100%);
+}
+header nav .nav-menu .nav-menu-list > li:hover a {
+  color: #fff !important;
+}
+header nav .nav-menu .nav-menu-list > li:hover a > img {
+  filter: brightness(0) invert(1);
+}
+header nav .nav-menu .nav-menu-list > li.active {
+  background: transparent linear-gradient(180deg, #A6D2F7 0%, #2595F2 19%, #257EC7 77%, #32A0FA 100%);
+}
+header nav .nav-menu .nav-menu-list > li.active a {
+  color: #fff !important;
+}
+header nav .nav-menu .nav-menu-list > li.active a > img {
+  filter: brightness(0) invert(1);
+}
+header nav .nav-link-group {
+  background-image: url(../img/loginbg.png);
+  width: 158px;
+  height: 46px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+header nav .nav-link-group > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-section {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.announcement-sec {
+  display: block;
+  margin-top: -95px;
+  position: relative;
+  z-index: 8;
+}
+
+.announcement-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--dark-bluesh);
+}
+.announcement-bar::before {
+  content: url(../img/GG.png);
+}
