@@ -7,7 +7,7 @@ $(function(){
       if (isMobile()) {
             
       } else {
-      window.location.replace("/");
+      window.location.replace("../");
       }
       $(window).resize(function() {
         // This will fire each time the window is resized:
@@ -17,7 +17,7 @@ $(function(){
         } else {
           
           if($(window).width() >= 1024) {
-                window.location.replace("/");
+                window.location.replace("../");
                 
             }
         }

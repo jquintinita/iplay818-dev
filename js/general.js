@@ -53,7 +53,7 @@ $(function(){
         return regex.test(navigator.userAgent);
       }
       if (isMobile()) {
-        window.location.replace("/mobile/");
+        window.location.replace("./mobile/");
       } else {
       
       }
@@ -67,7 +67,7 @@ $(function(){
           } else {
               // if smaller
               if (isMobile()) {
-                window.location.replace("/mobile/");
+                window.location.replace("./mobile/");
               } else {
               
               }
