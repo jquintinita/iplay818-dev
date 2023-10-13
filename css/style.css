@@ -38,6 +38,16 @@ body {
   flex-wrap: wrap;
 }
 
+.slick-next, .slick-prev {
+  width: 30px;
+  height: 30px;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: var(--dark-bluesh);
+  font-size: 30px;
+}
+
 @font-face {
   font-family: "PingFang SC";
   src: url("/css/fonts/PingFangSCBold.woff2") format("woff2"), url("/css/fonts/PingFangSCBold.woff") format("woff"), url("/css/fonts/PingFangSCBold.ttf") format("truetype");
@@ -198,7 +208,7 @@ header .mega-submenu .mega-menu-sub .mega-items a {
   text-decoration: none;
 }
 header .mega-submenu .mega-menu-sub .mega-items a > img {
-  margin-top: 31px;
+  margin-top: 5px;
 }
 header .mega-submenu .mega-menu-sub .mega-items img {
   margin: 0 auto 0;
