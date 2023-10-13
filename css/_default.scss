@@ -30,9 +30,40 @@
 body{
     font-family: 'PingFang SC';
     font-weight: normal;
-
     background-color: var(--alice-blue);
     background-image: url(../img/main-background.png);
+}
+h1{
+    font-size: 56px;
+}
+h2{
+    font-size: 42px;
+}
+h3{
+    font-size: 36px;
+}
+h4{
+    font-size: 26px;
+}
+h5{
+    font-size: 22px;
+}
+h6{
+    font-size: 20px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+    line-height: 1.4em;
+}
+p{
+    line-height: 1.6em;
+}
+.color-dark-bluesh{
+    color: var(--dark-bluesh);
+}
+
+.light-text{
+    font-weight: 100;
 }
 
 .container{
@@ -66,6 +97,7 @@ body{
 }
 .small-text{
     font-size: var(--smallFontsize);
+    font-weight: 500;
 }
 
 .download-sec{
@@ -91,11 +123,11 @@ body{
     left: 0;
     transform: translateY(-50%);
 }
-.border-download{
+.border-gradient{
     position: relative;
     padding-top: 10px;
 }
-.border-download::before{
+.border-gradient::before{
     content: "";
     height: 3px;
     width: 80px;
@@ -104,4 +136,41 @@ body{
     top: 0px;
     right: 0;
     position: absolute;
+}
+
+
+.download-wrapper{
+    .flex-row{
+        align-items: center;
+        gap: 30px;
+        .flex-column-1-3{
+            flex: 0 calc(40% - 30px);
+            img{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        .flex-column-2-3{
+            flex: 0 calc(60% - 30px);
+        }
+    }
+}
+
+.content-box{
+    width: 100%;
+    color: var(--dark-bluesh);
+    padding: 10px 0;
+    h3{
+        color: #000;
+     + h4{
+        font-size: 18px;
+        margin-bottom: 15px;
+     }   
+    }
+    &.right-align{
+        text-align: right;
+    }
+
 }
