@@ -106,6 +106,21 @@ header{
             .flex-row{
                 align-items: center;
                 gap: 60px;
+                flex-wrap: wrap;
+                > .clients-megamenu{
+                    width:  calc(85% - 60px)
+                }
+                .qr-box{
+                    width: calc(15% - 60px);
+                    a{
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        color: var(--dark-bluesh);
+                        text-decoration: none;
+                    }
+                }
             }
             .mega-items{
                 a{
@@ -118,14 +133,9 @@ header{
                     > img{
                         margin-top: 31px;
                     }
-                    &.qr-code-bg{
-                        background-image: url(../img/code_container.png);
-                        width: 150px;
-                        height: 175px;
-                        background-size: contain;
-                    }
-                   
-                       
+                }
+                img{
+                    margin: 0 auto 0;
                 }
                 &.sports{
                     position: relative;
@@ -176,6 +186,11 @@ header{
         }
     }
 }
-.sports-megamenu{
- width: 100%;
+a{
+    &.qr-code-bg{
+        background-image: url(../img/code_container.png);
+        width: 150px;
+        height: 175px;
+        background-size: contain;
+    }
 }

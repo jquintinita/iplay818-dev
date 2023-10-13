@@ -15,7 +15,16 @@ $(function(){
         dots: false,
         arrows: true,
         infinite: false,
-        slidesToShow: 4,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        
+      });
+
+      $('.casino-megamenu').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
         
       });

@@ -173,6 +173,21 @@ header .mega-submenu .mega-menu-sub {
 header .mega-submenu .mega-menu-sub .flex-row {
   align-items: center;
   gap: 60px;
+  flex-wrap: wrap;
+}
+header .mega-submenu .mega-menu-sub .flex-row > .clients-megamenu {
+  width: calc(85% - 60px);
+}
+header .mega-submenu .mega-menu-sub .flex-row .qr-box {
+  width: calc(15% - 60px);
+}
+header .mega-submenu .mega-menu-sub .flex-row .qr-box a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--dark-bluesh);
+  text-decoration: none;
 }
 header .mega-submenu .mega-menu-sub .mega-items a {
   display: flex;
@@ -185,11 +200,8 @@ header .mega-submenu .mega-menu-sub .mega-items a {
 header .mega-submenu .mega-menu-sub .mega-items a > img {
   margin-top: 31px;
 }
-header .mega-submenu .mega-menu-sub .mega-items a.qr-code-bg {
-  background-image: url(../img/code_container.png);
-  width: 150px;
-  height: 175px;
-  background-size: contain;
+header .mega-submenu .mega-menu-sub .mega-items img {
+  margin: 0 auto 0;
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports {
   position: relative;
@@ -230,8 +242,11 @@ header.mega-menu-hidden.mega-menu-on .mega-submenu .mega-menu-sub.on {
   opacity: 1;
 }
 
-.sports-megamenu {
-  width: 100%;
+a.qr-code-bg {
+  background-image: url(../img/code_container.png);
+  width: 150px;
+  height: 175px;
+  background-size: contain;
 }
 
 .banner-section {
