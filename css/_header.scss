@@ -9,7 +9,7 @@ header{
     nav{
         position: relative;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         .nav-menu{
             display: flex;
@@ -27,7 +27,7 @@ header{
             flex-grow: 1;
             .nav-menu-list{
                 display: flex;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 gap: 8px;
                 >li{
                     list-style: none;
@@ -41,18 +41,21 @@ header{
                         padding: 0 10px;
                         text-decoration: none;
                         color: inherit;
-                        font-size: 18px;
+                        font-size: var(--menuNavtext);
                         line-height: 25px;
                         height: 100%;  
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: center;
+                        line-height: 1em;
+                        text-align: center;
+                        padding-top: 15px;
                         > img{
                            width: 20px;
                            margin-bottom:5px;
                         }
                     }
                     &:last-child{
-                        margin-left: 90px;
+                        margin-left: 50px;
                         a{
 
                         }
@@ -87,6 +90,7 @@ header{
             align-items: center;
             justify-content: center;
             gap: 15px;
+            color: #fff;
             > a{
                 color: #fff;
                 text-decoration: none;
@@ -94,7 +98,11 @@ header{
         }
     }
     .mega-submenu{
+        position: relative;
+        background-color: #fff;
+      
         .mega-menu-sub{
+            position: absolute;
             .flex-row{
                 align-items: center;
                 gap: 60px;
@@ -119,24 +127,55 @@ header{
                    
                        
                 }
-                
+                &.sports{
+                    position: relative;
+                    img{
+                        margin: 0 auto 0;
+                    }
+                    > a{
+                        display: block;
+                    }
+                    &:hover{
+                        > img{
+                            -webkit-filter: drop-shadow(5px 5px 5px var(--celestial-blue) );
+                            filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+                        }
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
     &.mega-menu-hidden{
         .mega-submenu{
-            display: none;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 200ms linear;
             .mega-menu-sub{
-                display: none;
+                display: block;
+                visibility: hidden;
+                opacity: 0;
             }
         }
         &.mega-menu-on{
             .mega-submenu{
-                display: block !important;
+                display: block;
+                visibility: visible;
+                opacity: 1;
+                height: 250px;
+                overflow: hidden;
                 .mega-menu-sub{
-                    
+                    &.on{
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
+}
+.sports-megamenu{
+ width: 100%;
 }

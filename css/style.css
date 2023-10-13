@@ -15,6 +15,11 @@
   --dark-bluesh:#798B9C;
 }
 
+:lang(en) {
+  --fontSize:16px;
+  --menuNavtext: 13px;
+}
+
 body {
   font-family: "PingFang SC";
   font-weight: normal;
@@ -35,28 +40,28 @@ body {
 
 @font-face {
   font-family: "PingFang SC";
-  src: url("PingFangSCBold.woff2") format("woff2"), url("PingFangSCBold.woff") format("woff"), url("PingFangSCBold.ttf") format("truetype");
+  src: url("/css/fonts/PingFangSCBold.woff2") format("woff2"), url("/css/fonts/PingFangSCBold.woff") format("woff"), url("/css/fonts/PingFangSCBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PingFang SC";
-  src: url("PingFangSCHeavy.woff2") format("woff2"), url("PingFangSCHeavy.woff") format("woff"), url("PingFangSCHeavy.ttf") format("truetype");
+  src: url("/css/fonts/PingFangSCHeavy.woff2") format("woff2"), url("/css/fonts/PingFangSCHeavy.woff") format("woff"), url("/css/fonts/PingFangSCHeavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PingFang SC";
-  src: url("PingFangSCRegular.woff2") format("woff2"), url("PingFangSCRegular.woff") format("woff"), url("PingFangSCRegular.ttf") format("truetype");
+  src: url("/css/fonts/PingFangSCRegular.woff2") format("woff2"), url("/css/fonts/PingFangSCRegular.woff") format("woff"), url("/css/fonts/PingFangSCRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PingFang SC";
-  src: url("SFProPingFangSC-Medium.woff2") format("woff2"), url("SFProPingFangSC-Medium.woff") format("woff"), url("SFProPingFangSC-Medium.ttf") format("truetype");
+  src: url("/fonts/SFProPingFangSC-Medium.woff2") format("woff2"), url("/fonts/SFProPingFangSC-Medium.woff") format("woff"), url("/fonts/SFProPingFangSC-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -73,7 +78,7 @@ header {
 header nav {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
 header nav .nav-menu {
@@ -93,7 +98,7 @@ header nav .nav-menu {
 }
 header nav .nav-menu .nav-menu-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
 }
 header nav .nav-menu .nav-menu-list > li {
@@ -109,18 +114,21 @@ header nav .nav-menu .nav-menu-list > li > a {
   padding: 0 10px;
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: var(--menuNavtext);
   line-height: 25px;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  line-height: 1em;
+  text-align: center;
+  padding-top: 15px;
 }
 header nav .nav-menu .nav-menu-list > li > a > img {
   width: 20px;
   margin-bottom: 5px;
 }
 header nav .nav-menu .nav-menu-list > li:last-child {
-  margin-left: 90px;
+  margin-left: 50px;
 }
 header nav .nav-menu .nav-menu-list > li:hover {
   background: transparent linear-gradient(180deg, #A6D2F7 0%, #2595F2 19%, #257EC7 77%, #32A0FA 100%);
@@ -149,10 +157,18 @@ header nav .nav-link-group {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  color: #fff;
 }
 header nav .nav-link-group > a {
   color: #fff;
   text-decoration: none;
+}
+header .mega-submenu {
+  position: relative;
+  background-color: #fff;
+}
+header .mega-submenu .mega-menu-sub {
+  position: absolute;
 }
 header .mega-submenu .mega-menu-sub .flex-row {
   align-items: center;
@@ -175,20 +191,58 @@ header .mega-submenu .mega-menu-sub .mega-items a.qr-code-bg {
   height: 175px;
   background-size: contain;
 }
+header .mega-submenu .mega-menu-sub .mega-items.sports {
+  position: relative;
+}
+header .mega-submenu .mega-menu-sub .mega-items.sports img {
+  margin: 0 auto 0;
+}
+header .mega-submenu .mega-menu-sub .mega-items.sports > a {
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.sports:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items.sports:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
 header.mega-menu-hidden .mega-submenu {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms linear;
 }
 header.mega-menu-hidden .mega-submenu .mega-menu-sub {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
 }
 header.mega-menu-hidden.mega-menu-on .mega-submenu {
-  display: block !important;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: 250px;
+  overflow: hidden;
 }
+header.mega-menu-hidden.mega-menu-on .mega-submenu .mega-menu-sub.on {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.sports-megamenu {
+  width: 100%;
+}
+
 .banner-section {
   width: 100%;
   height: auto;
   display: block;
   position: relative;
+}
+.banner-section img {
+  max-width: 100%;
+  height: auto;
 }
 
 .announcement-sec {

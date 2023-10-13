@@ -14,9 +14,12 @@
     --dark-gray: #333;
     --french-gray: #D1D6DDff;
     --dark-bluesh:#798B9C;
-
+    
 }
-
+:lang(en){
+    --fontSize:16px;
+    --menuNavtext: 13px;
+}
 body{
     font-family: 'PingFang SC';
     font-weight: normal;
