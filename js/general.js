@@ -53,7 +53,7 @@ $(function(){
 
       //DETECT MOBILE
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        window.location.replace("/mobile/");
+        window.location.replace("mobile/");
       }else{
        
       }
