@@ -14,11 +14,18 @@
     --dark-gray: #333;
     --french-gray: #D1D6DDff;
     --dark-bluesh:#798B9C;
+    --skyblue:#4bacff;
     
 }
 :lang(en){
     --fontSize:16px;
     --menuNavtext: 13px;
+}
+:lang(en){
+    --fontSize:16px;
+    --menuNavtext: 13px;
+    --bigFontsize: 30px;
+    --smallFontsize: 16px;
 }
 body{
     font-family: 'PingFang SC';
@@ -37,6 +44,10 @@ body{
 .flex-row{
     display: flex;
     flex-wrap: wrap;
+    &.flex-between{
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .slick-next, .slick-prev{
     width: 30px;
@@ -45,4 +56,52 @@ body{
 .slick-next:before, .slick-prev:before{
     color: var(--dark-bluesh);
     font-size: 30px;
+}
+
+
+.big-text{
+    font-size: var(--bigFontsize);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.small-text{
+    font-size: var(--smallFontsize);
+}
+
+.download-sec{
+    position: relative;
+    display: block;
+    padding: 60px 0;
+
+}
+.title-left{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+}
+.border-trapiziod:after{
+    width: 40px;
+    height: 57px;
+    display: block;
+    clip-path: polygon(0 0, 36% 20%, 36% 80%, 0 100%);
+    background-color: var(--skyblue);
+    position: absolute;
+    content: ""; 
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.border-download{
+    position: relative;
+    padding-top: 10px;
+}
+.border-download::before{
+    content: "";
+    height: 3px;
+    width: 80px;
+    background: transparent linear-gradient(90deg, #46ECFF 0%, #238CFF 100%) 0% 0% no-repeat;
+    display: block;
+    top: 0px;
+    right: 0;
+    position: absolute;
 }

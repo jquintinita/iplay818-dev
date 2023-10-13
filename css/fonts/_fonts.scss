@@ -30,10 +30,10 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('/fonts/SFProPingFangSC-Medium.woff2') format('woff2'),
-        url('/fonts/SFProPingFangSC-Medium.woff') format('woff'),
-        url('/fonts/SFProPingFangSC-Medium.ttf') format('truetype'); 
-    font-weight: 500;
+    src: url('/css/fonts/SFProPingFangSC-Medium.woff2') format('woff2'),
+        url('/css/fonts/SFProPingFangSC-Medium.woff') format('woff'),
+        url('/css/fonts/SFProPingFangSC-Medium.ttf') format('truetype'); 
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }

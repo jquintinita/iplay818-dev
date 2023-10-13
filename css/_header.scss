@@ -107,11 +107,16 @@ header{
                 align-items: center;
                 gap: 60px;
                 flex-wrap: wrap;
+                justify-content: space-between;
                 > .clients-megamenu{
-                    width:  calc(85% - 60px)
+                    width:  calc(85% - 30px);
+                    min-width: 990px;
                 }
                 .qr-box{
-                    width: calc(15% - 60px);
+                    width: calc(15% - 30px);
+                    min-height: 218px !important;
+                    display: flex;
+                    align-items: center;
                     a{
                         display: flex !important;
                         align-items: center;
@@ -121,6 +126,54 @@ header{
                         text-decoration: none;
                     }
                 }
+                .poker-megamenu{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 40px;
+                    flex: 0 calc(85% - 30px);
+                    width: 100%;
+                    .poker{
+                        width: calc(320px - 40px);
+                        > img{
+                            margin: 0 auto;
+                            display: block;
+                        }
+                        > a{
+                            margin-top: -38px;
+                            padding-left: 20px
+                        }
+                    }
+                    + .qr-box{
+                        flex: 0 calc(15%  - 30px);
+                    }
+                }
+                .esports-megamenu{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 40px;
+                    flex: 0 calc(85% - 30px);
+                    width: 100%;
+                    max-height: 218px;
+                }
+                .lotto-megamenu{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    gap: 40px;
+                    flex: 0 calc(85% - 30px);
+                    width: 100%;
+                    max-height: 218px;
+                }
+                .promo-megamenu{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    gap: 30px;
+                    flex: 0 calc(85% - 30px);
+                    width: 100%;
+                    max-height: 218px;
+                }
+                
             }
             .mega-items{
                 a{
@@ -130,13 +183,9 @@ header{
                     align-items: center;
                     color: var(--dark-bluesh);
                     text-decoration: none;
-                    > img{
-                        margin-top: 5px;
-                    }
+                   
                 }
-                img{
-                    margin: 0 auto 0;
-                }
+             
                 &.sports{
                     position: relative;
                     img{
@@ -144,6 +193,42 @@ header{
                     }
                     > a{
                         display: block;
+                    }
+                    &:hover{
+                        > img{
+                            -webkit-filter: drop-shadow(5px 5px 5px var(--celestial-blue) );
+                            filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+                        }
+                        cursor: pointer;
+                    }
+                }
+                &.casino{
+                    img{
+                        margin: 0 auto 0;
+                    }
+                    > a{
+                        display: block;
+                        > img{
+                            margin-bottom: 14px !important;
+                        }
+                    }
+                    &:hover{
+                        > img{
+                            -webkit-filter: drop-shadow(5px 5px 5px var(--celestial-blue) );
+                            filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+                        }
+                        cursor: pointer;
+                    }
+                }
+                &.slot{
+                    img{
+                        margin: 0 auto 0;
+                    }
+                    > a{
+                        display: block;
+                        > img{
+                            margin-bottom: 0px !important;
+                        }
                     }
                     &:hover{
                         > img{
@@ -173,7 +258,7 @@ header{
                 display: block;
                 visibility: visible;
                 opacity: 1;
-                height: 250px;
+                height: 220px;
                 overflow: hidden;
                 .mega-menu-sub{
                     &.on{

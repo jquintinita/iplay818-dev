@@ -13,11 +13,19 @@
   --dark-gray: #333;
   --french-gray: #D1D6DDff;
   --dark-bluesh:#798B9C;
+  --skyblue:#4bacff;
 }
 
 :lang(en) {
   --fontSize:16px;
   --menuNavtext: 13px;
+}
+
+:lang(en) {
+  --fontSize:16px;
+  --menuNavtext: 13px;
+  --bigFontsize: 30px;
+  --smallFontsize: 16px;
 }
 
 body {
@@ -37,6 +45,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.flex-row.flex-between {
+  justify-content: space-between;
+  align-items: center;
+}
 
 .slick-next, .slick-prev {
   width: 30px;
@@ -46,6 +58,58 @@ body {
 .slick-next:before, .slick-prev:before {
   color: var(--dark-bluesh);
   font-size: 30px;
+}
+
+.big-text {
+  font-size: var(--bigFontsize);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.small-text {
+  font-size: var(--smallFontsize);
+}
+
+.download-sec {
+  position: relative;
+  display: block;
+  padding: 60px 0;
+}
+
+.title-left {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+}
+
+.border-trapiziod:after {
+  width: 40px;
+  height: 57px;
+  display: block;
+  -webkit-clip-path: polygon(0 0, 36% 20%, 36% 80%, 0 100%);
+          clip-path: polygon(0 0, 36% 20%, 36% 80%, 0 100%);
+  background-color: var(--skyblue);
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.border-download {
+  position: relative;
+  padding-top: 10px;
+}
+
+.border-download::before {
+  content: "";
+  height: 3px;
+  width: 80px;
+  background: transparent linear-gradient(90deg, #46ECFF 0%, #238CFF 100%) 0% 0% no-repeat;
+  display: block;
+  top: 0px;
+  right: 0;
+  position: absolute;
 }
 
 @font-face {
@@ -71,8 +135,8 @@ body {
 }
 @font-face {
   font-family: "PingFang SC";
-  src: url("/fonts/SFProPingFangSC-Medium.woff2") format("woff2"), url("/fonts/SFProPingFangSC-Medium.woff") format("woff"), url("/fonts/SFProPingFangSC-Medium.ttf") format("truetype");
-  font-weight: 500;
+  src: url("/css/fonts/SFProPingFangSC-Medium.woff2") format("woff2"), url("/css/fonts/SFProPingFangSC-Medium.woff") format("woff"), url("/css/fonts/SFProPingFangSC-Medium.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -184,12 +248,17 @@ header .mega-submenu .mega-menu-sub .flex-row {
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 header .mega-submenu .mega-menu-sub .flex-row > .clients-megamenu {
-  width: calc(85% - 60px);
+  width: calc(85% - 30px);
+  min-width: 990px;
 }
 header .mega-submenu .mega-menu-sub .flex-row .qr-box {
-  width: calc(15% - 60px);
+  width: calc(15% - 30px);
+  min-height: 218px !important;
+  display: flex;
+  align-items: center;
 }
 header .mega-submenu .mega-menu-sub .flex-row .qr-box a {
   display: flex !important;
@@ -199,6 +268,53 @@ header .mega-submenu .mega-menu-sub .flex-row .qr-box a {
   color: var(--dark-bluesh);
   text-decoration: none;
 }
+header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+}
+header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker {
+  width: 280px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker > img {
+  margin: 0 auto;
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker > a {
+  margin-top: -38px;
+  padding-left: 20px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu + .qr-box {
+  flex: 0 calc(15% - 30px);
+}
+header .mega-submenu .mega-menu-sub .flex-row .esports-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+  max-height: 218px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .lotto-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 40px;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+  max-height: 218px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .promo-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+  max-height: 218px;
+}
 header .mega-submenu .mega-menu-sub .mega-items a {
   display: flex;
   flex-direction: column;
@@ -206,12 +322,6 @@ header .mega-submenu .mega-menu-sub .mega-items a {
   align-items: center;
   color: var(--dark-bluesh);
   text-decoration: none;
-}
-header .mega-submenu .mega-menu-sub .mega-items a > img {
-  margin-top: 5px;
-}
-header .mega-submenu .mega-menu-sub .mega-items img {
-  margin: 0 auto 0;
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports {
   position: relative;
@@ -226,6 +336,36 @@ header .mega-submenu .mega-menu-sub .mega-items.sports:hover {
   cursor: pointer;
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino img {
+  margin: 0 auto 0;
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino > a {
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino > a > img {
+  margin-bottom: 14px !important;
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot img {
+  margin: 0 auto 0;
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot > a {
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot > a > img {
+  margin-bottom: 0px !important;
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot:hover > img {
   filter: drop-shadow(5px 5px 5px var(--celestial-blue));
 }
 header.mega-menu-hidden .mega-submenu {
@@ -243,7 +383,7 @@ header.mega-menu-hidden.mega-menu-on .mega-submenu {
   display: block;
   visibility: visible;
   opacity: 1;
-  height: 250px;
+  height: 220px;
   overflow: hidden;
 }
 header.mega-menu-hidden.mega-menu-on .mega-submenu .mega-menu-sub.on {

@@ -28,6 +28,16 @@ $(function(){
         slidesToScroll: 1,
         
       });
+      $('.slot-megamenu').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        
+      });
+    
+      
     
       $(".nav-menu-list > li").hover(function(){
         console.log($(this).attr("data-nav"));
