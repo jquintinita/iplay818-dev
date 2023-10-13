@@ -17,6 +17,7 @@ $(function(){
         } else {
           
           if($(window).width() >= 1024) {
+                var pathname = window.location.pathname;
                 window.location.replace("../");
                 
             }

@@ -53,7 +53,8 @@ $(function(){
         return regex.test(navigator.userAgent);
       }
       if (isMobile()) {
-        window.location.replace("./mobile/");
+        var pathname = window.location.pathname;
+        window.location.replace( pathname + "/mobile/");
       } else {
       
       }
@@ -62,12 +63,11 @@ $(function(){
       $(window).resize(function() {
         // This will fire each time the window is resized:
           if($(window).width() >= 1024) {
-              // if larger or equal
-              $('.element').show();
           } else {
               // if smaller
               if (isMobile()) {
-                window.location.replace("./mobile/");
+                var pathname = window.location.pathname;
+                window.location.replace(pathname +"/mobile/");
               } else {
               
               }
