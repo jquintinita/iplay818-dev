@@ -61,6 +61,6 @@ body{
     overflow-y: auto;
     height: calc(100vh -  15vw);
     @media screen and (max-height: 852px) and (orientation: portrait) {
-        height: calc(100vh -  16vw);
+        height: calc(100vh -  20vw);
     }
 }
