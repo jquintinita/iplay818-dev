@@ -1,0 +1,55 @@
+/*Default css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --carolina-blue: #76ABD1ff;
+    --celestial-blue: #50A0D5ff;
+    --silver-lake-blue: #6289B3ff;
+    --columbia-blue: #C1DAF0ff;
+    --alice-blue: #EFF7FEff;
+    --dark-gray: #333;
+    --french-gray: #D1D6DDff;
+    --dark-bluesh:#798B9C;
+    --skyblue:#4bacff;
+    --bg-orginal-color: #E9F5FE;
+  }
+body{
+    background-color: var(--bg-orginal-color);
+}
+.container{
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.announcement-sec{
+    display: block;
+
+    position: relative;
+    z-index: 8;
+}
+.announcement-bar{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    color: var(--dark-bluesh);
+    position: relative;
+    &::before{
+        content: url(../img/gg_app@2x.png);
+        position: absolute;
+        left: 0;
+    }
+}
+
+.page-container{
+    margin-bottom: 7vh;
+    overflow-y: auto;
+    height: calc(100vh - 7vh);
+}

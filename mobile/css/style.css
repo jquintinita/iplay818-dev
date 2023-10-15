@@ -1,0 +1,199 @@
+/*Default css*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --carolina-blue: #76ABD1ff;
+  --celestial-blue: #50A0D5ff;
+  --silver-lake-blue: #6289B3ff;
+  --columbia-blue: #C1DAF0ff;
+  --alice-blue: #EFF7FEff;
+  --dark-gray: #333;
+  --french-gray: #D1D6DDff;
+  --dark-bluesh:#798B9C;
+  --skyblue:#4bacff;
+  --bg-orginal-color: #E9F5FE;
+}
+
+body {
+  background-color: var(--bg-orginal-color);
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+
+.announcement-sec {
+  display: block;
+  position: relative;
+  z-index: 8;
+}
+
+.announcement-bar {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  color: var(--dark-bluesh);
+  position: relative;
+}
+.announcement-bar::before {
+  content: url(../img/gg_app@2x.png);
+  position: absolute;
+  left: 0;
+}
+
+.page-container {
+  margin-bottom: 7vh;
+  overflow-y: auto;
+  height: 93vh;
+}
+
+header {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+}
+header .header-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-wrapper .logo-div .logo-holder {
+  width: 44vw;
+  color: transparent;
+  background-image: url(../img/logo_app@2x.png);
+  height: 11vw;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 40vw;
+}
+header .header-wrapper .right-menu img {
+  height: 5vw;
+}
+
+footer {
+  background-image: url(../img/app_menubg@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: env(safe-area-inset-bottom);
+  height: 13.06vh;
+  background-position: center bottom;
+  width: 100%;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.banner-slider img {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.main-wrapper .games {
+  flex: 1 1;
+  padding: 5px;
+  height: 60vh;
+  overflow-y: auto;
+  border-radius: 2.66667vw;
+  overflow-x: hidden;
+}
+.main-wrapper .games .games-cards {
+  height: 34vw !important;
+  border-radius: 2.66667vw;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--columbia-blue);
+}
+.main-wrapper .games .games-cards .sports {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-wrapper .games-menu {
+  flex: 0 13vw;
+}
+.main-wrapper .games-menu .game-tab {
+  width: 12vw;
+  height: 12vw;
+  background-image: url(../img/leftmenu_bg@2x.png);
+  background-size: contain;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-size: 2.8vw;
+  text-align: center;
+  color: #788B9D;
+  margin-bottom: 10px;
+}
+.main-wrapper .games-menu .game-tab .game-icon {
+  width: 6.8vw;
+  height: 6.8vw;
+  background-size: contain;
+  background-position: center;
+  margin: 3px auto 0;
+  background-repeat: no-repeat;
+}
+.main-wrapper .games-menu .game-tab .game-icon.fav-icon {
+  background-image: url(../img/game_fav.svg);
+  background-size: 130%;
+  background-position: center top;
+}
+.main-wrapper .games-menu .game-tab .game-icon.slot-icon {
+  background-image: url(../img/game_slot@2x.png);
+}
+.main-wrapper .games-menu .game-tab .game-icon.sports-icon {
+  background-image: url(../img/game_sports@2x.png);
+}
+.main-wrapper .games-menu .game-tab .game-icon.live-icon {
+  background-image: url(../img/game_livecasino@2x.png);
+}
+.main-wrapper .games-menu .game-tab .game-icon.lotto-icon {
+  background-image: url(../img/game_lotto@2x.png);
+}
+.main-wrapper .games-menu .game-tab .game-icon.fish-icon {
+  background-image: url(../img/game_fish@2x.png);
+}
+.main-wrapper .games-menu .game-tab.active, .main-wrapper .games-menu .game-tab:hover {
+  background-image: url(../img/leftmenu_bg_active@2x.png);
+  color: #fff;
+}
+.main-wrapper .games-menu .game-tab.active .fav-icon, .main-wrapper .games-menu .game-tab:hover .fav-icon {
+  background-image: url(../img/game_fav_hover.svg);
+}
+.main-wrapper .games-menu .game-tab.active .slot-icon, .main-wrapper .games-menu .game-tab:hover .slot-icon {
+  background-image: url(../img/game_slot__hover@2x.png);
+}
+.main-wrapper .games-menu .game-tab.active .sports-icon, .main-wrapper .games-menu .game-tab:hover .sports-icon {
+  background-image: url(../img/game_sports_hover@2x.png);
+}
+.main-wrapper .games-menu .game-tab.active .live-icon, .main-wrapper .games-menu .game-tab:hover .live-icon {
+  background-image: url(../img/game_livecasino__hover@2x.png);
+}
+.main-wrapper .games-menu .game-tab.active .lotto-icon, .main-wrapper .games-menu .game-tab:hover .lotto-icon {
+  background-image: url(../img/game_lotto_hover@2x.png);
+}
+.main-wrapper .games-menu .game-tab.active .fish-icon, .main-wrapper .games-menu .game-tab:hover .fish-icon {
+  background-image: url(../img/game_fish__hover@2x.png);
+}

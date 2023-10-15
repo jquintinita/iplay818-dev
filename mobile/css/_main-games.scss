@@ -1,0 +1,101 @@
+.main-wrapper{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    
+    .games{
+        flex: 1 1;
+        padding:5px;
+        height: calc(100vh - 40vh);
+        overflow-y: auto;
+        border-radius: 2.66667vw;
+        overflow-x: hidden;
+        .games-cards{
+            height: 34vw!important;
+            border-radius: 2.66667vw;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--columbia-blue);
+            .sports{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                &::before{
+    
+                }
+            }
+        }
+    }
+    .games-menu{
+        flex: 0 13vw;
+        .game-tab{
+            width: 12vw;
+            height: 12vw;
+            background-image: url(../img/leftmenu_bg@2x.png);
+            background-size: contain;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            font-size: 2.8vw;
+            text-align: center;
+            color: #788B9D;
+            margin-bottom: 10px;
+            .game-icon{
+                width: 6.8vw;
+                height: 6.8vw;
+                background-size: contain;
+                background-position: center;
+                margin: 3px auto 0;
+                background-repeat: no-repeat;
+                &.fav-icon{
+                    background-image: url(../img/game_fav.svg);
+                    background-size: 130%;
+                    background-position: center top;
+                }
+                &.slot-icon{
+                    background-image: url(../img/game_slot@2x.png);
+                }
+                &.sports-icon{
+                    background-image: url(../img/game_sports@2x.png);
+                }
+                &.live-icon{
+                    background-image: url(../img/game_livecasino@2x.png);
+                }
+                &.lotto-icon{
+                    background-image: url(../img/game_lotto@2x.png);
+                }
+                &.fish-icon{
+                    background-image: url(../img/game_fish@2x.png);
+                }
+            }
+
+            &.active, &:hover{
+                background-image: url(../img/leftmenu_bg_active@2x.png);
+                color: #fff;
+                .fav-icon{
+                    background-image: url(../img/game_fav_hover.svg);
+                }
+                .slot-icon{
+                    background-image: url(../img/game_slot__hover@2x.png);
+                }
+                .sports-icon{
+                    background-image: url(../img/game_sports_hover@2x.png);
+                }
+                .live-icon{
+                    background-image: url(../img/game_livecasino__hover@2x.png);
+                }
+                .lotto-icon{
+                    background-image: url(../img/game_lotto_hover@2x.png);
+                }
+                .fish-icon{
+                    background-image: url(../img/game_fish__hover@2x.png);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+header{
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    .header-wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .logo-div{
+            .logo-holder{
+                width: 44vw;
+                color: transparent;
+                background-image: url(../img/logo_app@2x.png);
+                height: 11vw;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                max-width: 40vw;
+            }
+        }
+        .right-menu{
+            img{
+                height: 5vw;
+            }
+        }
+    }
+}

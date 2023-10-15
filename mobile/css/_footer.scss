@@ -1,0 +1,14 @@
+footer{
+    background-image: url(../img/app_menubg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-bottom: env(safe-area-inset-bottom);
+    height: 13.06vh;
+    background-position: center bottom;
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
