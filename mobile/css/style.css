@@ -28,6 +28,11 @@ body {
   display: block;
 }
 
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .announcement-sec {
   display: block;
   position: relative;
@@ -35,7 +40,7 @@ body {
 }
 
 .announcement-bar {
-  width: 100%;
+  flex: 1;
   height: 40px;
   border-radius: 20px;
   display: flex;
@@ -48,6 +53,13 @@ body {
   content: url(../img/gg_app@2x.png);
   position: absolute;
   left: 0;
+}
+
+.right-bar {
+  flex: 0 1;
+}
+.right-bar > a {
+  display: block;
 }
 
 .page-container {
@@ -159,7 +171,7 @@ footer .footer-menu .footer-menu-items.active .profile {
 }
 
 .main-wrapper {
-  padding: 0px 0;
+  padding: 6px 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;

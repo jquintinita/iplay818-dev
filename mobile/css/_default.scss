@@ -25,7 +25,10 @@ body{
     display: block;
 }
 
-
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+}
 .announcement-sec{
     display: block;
 
@@ -33,7 +36,7 @@ body{
     z-index: 8;
 }
 .announcement-bar{
-    width: 100%;
+    flex: 1;
     height: 40px;
     border-radius: 20px;
     display: flex;
@@ -45,6 +48,12 @@ body{
         content: url(../img/gg_app@2x.png);
         position: absolute;
         left: 0;
+    }
+}
+.right-bar{
+    flex: 0  1;
+    > a{
+        display: block;
     }
 }
 
