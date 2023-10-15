@@ -51,9 +51,8 @@ body {
 }
 
 .page-container {
-  margin-bottom: 7vh;
   overflow-y: auto;
-  height: 93vh;
+  height: 100vh;
 }
 
 header {
@@ -102,7 +101,7 @@ footer {
 }
 
 .main-wrapper {
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
@@ -121,8 +120,9 @@ footer {
   position: relative;
   overflow: hidden;
   background-color: var(--columbia-blue);
+  margin-bottom: 1vh;
 }
-.main-wrapper .games .games-cards .sports {
+.main-wrapper .games .games-cards .game-clients {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -175,25 +175,25 @@ footer {
 .main-wrapper .games-menu .game-tab .game-icon.fish-icon {
   background-image: url(../img/game_fish@2x.png);
 }
-.main-wrapper .games-menu .game-tab.active, .main-wrapper .games-menu .game-tab:hover {
+.main-wrapper .games-menu .game-tab.active {
   background-image: url(../img/leftmenu_bg_active@2x.png);
   color: #fff;
 }
-.main-wrapper .games-menu .game-tab.active .fav-icon, .main-wrapper .games-menu .game-tab:hover .fav-icon {
+.main-wrapper .games-menu .game-tab.active .fav-icon {
   background-image: url(../img/game_fav_hover.svg);
 }
-.main-wrapper .games-menu .game-tab.active .slot-icon, .main-wrapper .games-menu .game-tab:hover .slot-icon {
+.main-wrapper .games-menu .game-tab.active .slot-icon {
   background-image: url(../img/game_slot__hover@2x.png);
 }
-.main-wrapper .games-menu .game-tab.active .sports-icon, .main-wrapper .games-menu .game-tab:hover .sports-icon {
+.main-wrapper .games-menu .game-tab.active .sports-icon {
   background-image: url(../img/game_sports_hover@2x.png);
 }
-.main-wrapper .games-menu .game-tab.active .live-icon, .main-wrapper .games-menu .game-tab:hover .live-icon {
+.main-wrapper .games-menu .game-tab.active .live-icon {
   background-image: url(../img/game_livecasino__hover@2x.png);
 }
-.main-wrapper .games-menu .game-tab.active .lotto-icon, .main-wrapper .games-menu .game-tab:hover .lotto-icon {
+.main-wrapper .games-menu .game-tab.active .lotto-icon {
   background-image: url(../img/game_lotto_hover@2x.png);
 }
-.main-wrapper .games-menu .game-tab.active .fish-icon, .main-wrapper .games-menu .game-tab:hover .fish-icon {
+.main-wrapper .games-menu .game-tab.active .fish-icon {
   background-image: url(../img/game_fish__hover@2x.png);
 }

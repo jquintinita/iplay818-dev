@@ -1,5 +1,5 @@
 .main-wrapper{
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
@@ -17,7 +17,8 @@
             position: relative;
             overflow: hidden;
             background-color: var(--columbia-blue);
-            .sports{
+            margin-bottom: 1vh;
+            .game-clients{
                 position: absolute;
                 height: 100%;
                 width: 100%;
@@ -74,7 +75,7 @@
                 }
             }
 
-            &.active, &:hover{
+            &.active{
                 background-image: url(../img/leftmenu_bg_active@2x.png);
                 color: #fff;
                 .fav-icon{
