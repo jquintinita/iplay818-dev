@@ -20,6 +20,7 @@
 
 body {
   background-color: var(--bg-orginal-color);
+  font-family: "PingFang SC", Microsoft YaHei, Helvetica, sans-serif;
 }
 
 .container {
@@ -67,6 +68,34 @@ body {
   overflow-y: auto;
 }
 
+@font-face {
+  font-family: "PingFang SC";
+  src: url("./fonts/PingFangSCBold.woff2") format("woff2"), url("./fonts/PingFangSCBold.woff") format("woff"), url("./fonts/PingFangSCBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("./fonts/PingFangSCHeavy.woff2") format("woff2"), url("./fonts/PingFangSCHeavy.woff") format("woff"), url("./fonts/PingFangSCHeavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("./fonts/PingFangSCRegular.woff2") format("woff2"), url("./fonts/PingFangSCRegular.woff") format("woff"), url("./fonts/PingFangSCRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PingFang SC";
+  src: url("./fonts/SFProPingFangSC-Medium.woff2") format("woff2"), url("./fonts/SFProPingFangSC-Medium.woff") format("woff"), url("./fonts/SFProPingFangSC-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 header {
   position: relative;
   display: block;
@@ -200,6 +229,60 @@ footer .footer-menu .footer-menu-items.active .profile {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.main-wrapper .games .games-cards .game-clients .game-title {
+  font-size: 4.2vw;
+  line-height: 17px;
+  position: absolute;
+  z-index: 2;
+  bottom: 16.6vw;
+  left: 3.5vw;
+  text-transform: uppercase;
+  color: #30383F;
+  font-weight: 400;
+}
+.main-wrapper .games .games-cards .game-clients .game-rebate {
+  font-size: 3.5vw;
+  font-weight: 500;
+  line-height: 17px;
+  color: #7A8D9F;
+  padding: 2vw;
+  background: transparent linear-gradient(180deg, #EDF1FC 0%, #E9EDF7 100%) 0% 0%;
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.1607843137), 0px 1px 1px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  bottom: 4.6vw;
+  left: 3.5vw;
+  z-index: 2;
+}
+.main-wrapper .games .games-cards .game-clients::after {
+  width: 50vw;
+  height: 12vw;
+  content: "";
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 3vw;
+  left: 3vw;
+  position: absolute;
+}
+.main-wrapper .games .games-cards .game-clients.sports::after {
+  background-image: url(../img/soprtstext@2x.png);
+}
+.main-wrapper .games .games-cards .game-clients.slots::after {
+  background-image: url(../img/soprtstext@2x.png);
+}
+.main-wrapper .games .games-cards .game-clients.live::after {
+  background-image: url(../img/soprtstext@2x.png);
+}
+.main-wrapper .games .games-cards .game-clients.lotto::after {
+  background-image: url(../img/soprtstext@2x.png);
+}
+.main-wrapper .games .games-cards .game-clients.fishing::after {
+  background-image: url(../img/soprtstext@2x.png);
 }
 .main-wrapper .games-menu {
   flex: 0 var(--defaultSize);

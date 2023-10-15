@@ -178,3 +178,101 @@ p{
     }
 
 }
+
+.mini-side-bar{
+    display: block;
+    position: fixed;
+    right: 0;
+    top:25%;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 99;
+    .side-bar-item-box{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px;
+        .side-bar-item{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            .side-bar-icon{
+                width: 35px;
+                height: 35px;
+                margin: 8px auto ;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                &.download{
+                    background-image: url(../img/301@2x.png);
+                }
+                &.info{
+                    background-image: url(../img/302@2x.png);
+                }
+                &.customer{
+                    background-image: url(../img/303@2x.png);
+                }
+                &.backtop{
+                    background-image: url(../img/304@2x.png);
+                }
+            }
+            
+            .text{
+                font-size: var(--smallFontsize);
+                color: var(--dark-bluesh);
+            }
+            &:hover{
+                cursor: pointer;
+                .side-bar-icon{
+                    &.download{
+                        background-image: url(../img/301_active@2x.png);
+                    }
+                    &.info{
+                        background-image: url(../img/302_active@2x.png);
+                    }
+                    &.customer{
+                        background-image: url(../img/303_active@2x.png);
+                    }
+                    &.backtop{
+                        background-image: url(../img/304_active@2x.png);
+                    }
+                }
+            }
+            .qrcode-tooltip{
+                position: absolute;
+                background-color: #fff;
+                right: 80px;
+                border-radius: 10px;
+                top: -30px;
+                width: 140px;
+                padding: 10px;
+                text-align: center;
+                display: none;
+                img{
+                    display: block;
+                    margin: 15px auto 0;
+                }
+                &:after{
+                    border-left: solid transparent 10px;
+                    border-right: solid transparent 10px;
+                    border-top: solid #fff 10px;
+                    top: 60px;
+                    content: " ";
+                    height: 0;
+                    right: -15px;
+                    position: absolute;
+                    width: 0;
+                    transform: rotateZ(-90deg);
+                }
+            }
+            &:hover{
+                .qrcode-tooltip{
+                    display: block;
+                }
+            }
+        }
+    }
+}

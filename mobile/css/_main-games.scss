@@ -26,7 +26,72 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                .game-title{
+                    font-size: 4.2vw;
+                    line-height: 17px;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 16.6vw;
+                    left: 3.5vw;
+                    text-transform: uppercase;
+                    color: #30383F;
+                    font-weight: 400;
+                }
+                .game-rebate{
+                    font-size: 3.5vw;
+                    font-weight: 500;
+                    line-height: 17px;
+                    color: #7A8D9F;
+                    padding: 2vw;
+                    background: transparent linear-gradient(180deg, #EDF1FC 0%, #E9EDF7 100%) 0% 0% ;
+                    box-shadow: inset 0px 1px 1px #FFFFFF29, 0px 1px 1px #00000029;
+                    border-radius: 30px;
+                    width: max-content;
+                    position: absolute;
+                    bottom: 4.6vw;
+                    left: 3.5vw;
+                    z-index: 2;
+                }
+                &::after{
+                    width: 50vw;
+                    height: 12vw;
+                    content: "";
+                    display: block;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    top: 3vw;
+                    left: 3vw;
+                    position: absolute;
+                    
+                }
+                &.sports{
+                    &::after{
+                        background-image: url(../img/soprtstext@2x.png);
+                    }
+                }
+                &.slots{
+                    &::after{
+                        background-image: url(../img/soprtstext@2x.png);
+                    }
+                }
+                &.live{
+                    &::after{
+                        background-image: url(../img/soprtstext@2x.png);
+                    }
+                }
+                &.lotto{
+                    &::after{
+                        background-image: url(../img/soprtstext@2x.png);
+                    }
+                }
+                &.fishing{
+                    &::after{
+                        background-image: url(../img/soprtstext@2x.png);
+                    }
+                }
             }
+
         }
     }
     .games-menu{

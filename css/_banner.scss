@@ -7,4 +7,27 @@
         max-width: 100%;
         height: auto;
     }
+    .slick-next, .slick-prev{
+        z-index: 99;
+    }
+    .slick-next{
+        right: 25px;
+    }
+    .slick-prev{
+        left: 25px;
+    }
+    .slick-dots{
+        bottom: 80px;
+        button:before{
+            font-size: 12px;
+        }
+        li.slick-active {
+            button:before{
+                opacity: .75;
+                color: var(--skyblue);
+            }
+           
+
+        }
+    }
 }

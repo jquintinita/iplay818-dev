@@ -1,9 +1,9 @@
 $(function(){
     $('.banner-slider').slick({
-        dots: false,
-        arrows: false,
+        dots: true,
+        arrows: true,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -75,6 +75,15 @@ $(function(){
           }
       }).resize(); // This will simulate a resize to trigger the initial run.
 
+
+      //backtotop
+      $("#toTop").click(function () {
+        //1 second of animation time
+        //html works for FFX but not Chrome
+        //body works for Chrome but not FFX
+        //This strange selector seems to work universally
+        $("html, body").animate({scrollTop: 0}, 1000);
+     });
 
 
       //TAB Module 
