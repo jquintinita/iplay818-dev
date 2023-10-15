@@ -95,8 +95,11 @@ $(".games-container").each(function() {
 
 
 
+var footerHeight = $("footer").innerHeight() + 5;
+var windowHeight = $(window).innerHeight();
 
 
+$(".page-container").css("height", windowHeight - footerHeight);
 
   function isMobile() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;

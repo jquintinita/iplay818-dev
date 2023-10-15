@@ -65,17 +65,6 @@ body {
 
 .page-container {
   overflow-y: auto;
-  height: calc(100vh - 15vw);
-}
-@media screen and (max-height: 852px) and (orientation: portrait) {
-  .page-container {
-    height: calc(100vh - 20vw);
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (min-device-pixel-ratio: 3) {
-  .page-container {
-    height: calc(100vh - 20vw);
-  }
 }
 
 header {
