@@ -58,7 +58,7 @@ body {
 header {
   position: relative;
   display: block;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 header .header-wrapper {
   display: flex;

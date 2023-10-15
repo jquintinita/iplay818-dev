@@ -20,6 +20,7 @@ $(function(){
     slidesToScroll: 1,
     vertical: true,
     swipeToSlide: true,
+    centerMode: true,
     verticalSwiping: true
   });
 
