@@ -1,13 +1,14 @@
+
 .main-wrapper{
     padding: 0px 0;
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
-    
+    --defaultSize: 15vw;
     .games{
         flex: 1 1;
-        padding:5px;
-        height: calc(100vh - 40vh);
+        padding:0px;
+        height: 100%;
         overflow-y: auto;
         border-radius: 2.66667vw;
         overflow-x: hidden;
@@ -32,10 +33,12 @@
         }
     }
     .games-menu{
-        flex: 0 13vw;
+        flex: 0 var(--defaultSize);
+        padding: 0px 0;
         .game-tab{
-            width: 12vw;
-            height: 12vw;
+            width: var(--defaultSize);
+            height: var(--defaultSize);
+            min-height: 9.6vw;
             background-image: url(../img/leftmenu_bg@2x.png);
             background-size: contain;
             position: relative;
@@ -44,8 +47,9 @@
             flex-direction: column;
             font-size: 2.8vw;
             text-align: center;
+            justify-content: center;
             color: #788B9D;
-            margin-bottom: 10px;
+            margin-bottom: 1.33333vw;
             .game-icon{
                 width: 6.8vw;
                 height: 6.8vw;

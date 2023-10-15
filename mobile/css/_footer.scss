@@ -3,12 +3,72 @@ footer{
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: env(safe-area-inset-bottom);
-    height: 13.06vh;
-    background-position: center bottom;
+    height: 13.06vw;
+    background-position: left -0.8vw;
     width: 100%;
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
+    .footer-menu{
+        display: flex;
+        flex-wrap: wrap;
+        .footer-menu-items{
+            flex: 1;
+            position: relative;
+            font-size: 2.66667vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark-bluesh);
+            .menu-icon{
+                width: 5.33333vw;
+                height: 5.33333vw;
+                margin-top: 1.06667vw;
+                margin-bottom: 1vw;
+                background-size: cover;
+                &.gaming{
+                    background-image: url(../img/app_gaming@2x.png);
+                }
+                &.bet-list{
+                    background-image: url(../img/app_betlist@2x.png);
+                }
+                &.home{
+                    width: 12vw;
+                    height: 12vw;
+                    top: -6.4vw;
+                    position: absolute;
+                    background-image: url(../img/app_home@2x.png);
+                    + .menu-name{
+                        margin-top: 7.4vw;
+                    }
+                }
+                &.prom{
+                    background-image: url(../img/app_prom@2x.png);
+                }
+                &.profile{
+                    background-image: url(../img/app_my@2x.png);
+                }
+            }
+            &.active{
+                .gaming{
+                    background-image: url(../img/app_gaming_active@2x.png);
+                }
+                .bet-list{
+                    background-image: url(../img/app_betlist_active@2x.png);
+                }
+                .home{
+                    background-image: url(../img/app_home_hover@2x.png);
+                }
+                .prom{
+                    background-image: url(../img/app_prom_active@2x.png);
+                }
+                .profile{
+                    background-image: url(../img/app_my_active@2x.png);
+                }
+            }
+        }
+    }
 }

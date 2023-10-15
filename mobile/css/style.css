@@ -52,7 +52,7 @@ body {
 
 .page-container {
   overflow-y: auto;
-  height: 100vh;
+  height: calc(100vh - 13.06vw);
 }
 
 header {
@@ -85,14 +85,72 @@ footer {
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding-bottom: env(safe-area-inset-bottom);
-  height: 13.06vh;
-  background-position: center bottom;
+  height: 13.06vw;
+  background-position: left -0.8vw;
   width: 100%;
   display: block;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 999;
+}
+footer .footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer-menu .footer-menu-items {
+  flex: 1;
+  position: relative;
+  font-size: 2.66667vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-bluesh);
+}
+footer .footer-menu .footer-menu-items .menu-icon {
+  width: 5.33333vw;
+  height: 5.33333vw;
+  margin-top: 1.06667vw;
+  margin-bottom: 1vw;
+  background-size: cover;
+}
+footer .footer-menu .footer-menu-items .menu-icon.gaming {
+  background-image: url(../img/app_gaming@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.bet-list {
+  background-image: url(../img/app_betlist@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.home {
+  width: 12vw;
+  height: 12vw;
+  top: -6.4vw;
+  position: absolute;
+  background-image: url(../img/app_home@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.home + .menu-name {
+  margin-top: 7.4vw;
+}
+footer .footer-menu .footer-menu-items .menu-icon.prom {
+  background-image: url(../img/app_prom@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.profile {
+  background-image: url(../img/app_my@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .gaming {
+  background-image: url(../img/app_gaming_active@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .bet-list {
+  background-image: url(../img/app_betlist_active@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .home {
+  background-image: url(../img/app_home_hover@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .prom {
+  background-image: url(../img/app_prom_active@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .profile {
+  background-image: url(../img/app_my_active@2x.png);
 }
 
 .banner-slider img {
@@ -105,11 +163,12 @@ footer {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
+  --defaultSize: 15vw;
 }
 .main-wrapper .games {
   flex: 1 1;
-  padding: 5px;
-  height: 60vh;
+  padding: 0px;
+  height: 100%;
   overflow-y: auto;
   border-radius: 2.66667vw;
   overflow-x: hidden;
@@ -131,11 +190,13 @@ footer {
   background-position: center;
 }
 .main-wrapper .games-menu {
-  flex: 0 13vw;
+  flex: 0 var(--defaultSize);
+  padding: 0px 0;
 }
 .main-wrapper .games-menu .game-tab {
-  width: 12vw;
-  height: 12vw;
+  width: var(--defaultSize);
+  height: var(--defaultSize);
+  min-height: 9.6vw;
   background-image: url(../img/leftmenu_bg@2x.png);
   background-size: contain;
   position: relative;
@@ -144,8 +205,9 @@ footer {
   flex-direction: column;
   font-size: 2.8vw;
   text-align: center;
+  justify-content: center;
   color: #788B9D;
-  margin-bottom: 10px;
+  margin-bottom: 1.33333vw;
 }
 .main-wrapper .games-menu .game-tab .game-icon {
   width: 6.8vw;
