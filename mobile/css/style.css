@@ -46,7 +46,7 @@ body {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 10px 10px 30px;
   color: var(--dark-bluesh);
   position: relative;
 }
