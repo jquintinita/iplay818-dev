@@ -60,4 +60,7 @@ body{
 .page-container{
     overflow-y: auto;
     height: calc(100vh -  15vw);
+    @media screen and (max-height: 852px) and (orientation: portrait) {
+        height: calc(100vh -  16vw);
+    }
 }
