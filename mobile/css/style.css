@@ -35,6 +35,7 @@ body {
 
 .announcement-sec {
   display: block;
+  padding: 10px 0;
   position: relative;
   z-index: 8;
 }
@@ -176,7 +177,7 @@ footer .footer-menu .footer-menu-items.active .profile {
 }
 
 .main-wrapper {
-  padding: 6px 0;
+  padding: 0 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
