@@ -55,7 +55,9 @@ $(function(){
       }
       if (isMobile()) {
         var pathname = window.location.pathname;
-        window.location.replace( pathname + "mobile/");
+        var splitpath = pathname.split('/')
+         window.location.replace(splitpath[0] +"/mobile/");
+        //window.location.replace( pathname + "/mobile/");
       } else {
       
       }
@@ -68,7 +70,8 @@ $(function(){
               // if smaller
               if (isMobile()) {
                 var pathname = window.location.pathname;
-                window.location.replace(pathname +"mobile/");
+                var splitpath = pathname.split('/')
+                 window.location.replace(splitpath[0] +"/mobile/");
               } else {
               
               }
