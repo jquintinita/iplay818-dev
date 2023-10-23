@@ -14,7 +14,7 @@ $(function(){
         dots: false,
         arrows: true,
         infinite: false,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       });
 
@@ -22,7 +22,7 @@ $(function(){
         dots: false,
         arrows: true,
         infinite: false,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       });
 

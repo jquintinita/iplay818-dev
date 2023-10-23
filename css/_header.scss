@@ -131,14 +131,6 @@ header{
                     width: 100%;
                     .poker{
                         width: calc(320px - 40px);
-                        > img{
-                            margin: 0 auto;
-                            display: block;
-                        }
-                        > a{
-                            margin-top: -38px;
-                            padding-left: 20px
-                        }
                     }
                     + .qr-box{
                         flex: 0 calc(15%  - 30px);
@@ -213,7 +205,10 @@ header{
                     align-items: center;
                     color: var(--dark-bluesh);
                     text-decoration: none;
-                   
+                    justify-content: center;
+                    > span{
+                        padding: 10px 0;
+                    }
                 }
              
                 &.sports{
@@ -223,6 +218,36 @@ header{
                     }
                     > a{
                         display: block;
+                        text-align: center;
+                        > span{
+                            padding: 10px 0;
+                            display: inline-block;
+                        }
+                    }
+                    &:hover{
+                        > img{
+                            -webkit-filter: drop-shadow(5px 5px 5px var(--celestial-blue) );
+                            filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+                        }
+                        cursor: pointer;
+                    }
+                }
+                &.poker{
+                    position: relative;
+                    img{
+                        margin: 0 auto 0;
+                        display: block;
+                    }
+                    > a{
+                        display: block;
+                        text-align: center;
+                        img{
+                            display: block;
+                        }
+                        > span{
+                            padding: 10px 0;
+                            display: inline-block;
+                        }
                     }
                     &:hover{
                         > img{
@@ -238,8 +263,13 @@ header{
                     }
                     > a{
                         display: block;
+                        text-align: center;
                         > img{
                             margin-bottom: 14px !important;
+                        }
+                        > span{
+                            padding: 10px 0;
+                            display: inline-block;
                         }
                     }
                     &:hover{
@@ -256,8 +286,13 @@ header{
                     }
                     > a{
                         display: block;
+                        text-align: center;
                         > img{
                             margin-bottom: 0px !important;
+                        }
+                        > span{
+                            padding: 10px 0;
+                            display: inline-block;
                         }
                     }
                     &:hover{
@@ -288,7 +323,7 @@ header{
                 display: block;
                 visibility: visible;
                 opacity: 1;
-                height: 220px;
+                height: 247px;
                 overflow: hidden;
                 .mega-menu-sub{
                     &.on{

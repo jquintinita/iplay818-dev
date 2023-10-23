@@ -14,6 +14,7 @@
   --french-gray: #D1D6DDff;
   --dark-bluesh:#798B9C;
   --skyblue:#4bacff;
+  --cyan-blue: #4EECE2;
 }
 
 :lang(en) {
@@ -450,14 +451,6 @@ header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu {
 header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker {
   width: 280px;
 }
-header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker > img {
-  margin: 0 auto;
-  display: block;
-}
-header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker > a {
-  margin-top: -38px;
-  padding-left: 20px;
-}
 header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu + .qr-box {
   flex: 0 calc(15% - 30px);
 }
@@ -527,6 +520,10 @@ header .mega-submenu .mega-menu-sub .mega-items a {
   align-items: center;
   color: var(--dark-bluesh);
   text-decoration: none;
+  justify-content: center;
+}
+header .mega-submenu .mega-menu-sub .mega-items a > span {
+  padding: 10px 0;
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports {
   position: relative;
@@ -536,6 +533,11 @@ header .mega-submenu .mega-menu-sub .mega-items.sports img {
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports > a {
   display: block;
+  text-align: center;
+}
+header .mega-submenu .mega-menu-sub .mega-items.sports > a > span {
+  padding: 10px 0;
+  display: inline-block;
 }
 header .mega-submenu .mega-menu-sub .mega-items.sports:hover {
   cursor: pointer;
@@ -543,14 +545,43 @@ header .mega-submenu .mega-menu-sub .mega-items.sports:hover {
 header .mega-submenu .mega-menu-sub .mega-items.sports:hover > img {
   filter: drop-shadow(5px 5px 5px var(--celestial-blue));
 }
+header .mega-submenu .mega-menu-sub .mega-items.poker {
+  position: relative;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker img {
+  margin: 0 auto 0;
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker > a {
+  display: block;
+  text-align: center;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker > a img {
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker > a > span {
+  padding: 10px 0;
+  display: inline-block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items.poker:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
 header .mega-submenu .mega-menu-sub .mega-items.casino img {
   margin: 0 auto 0;
 }
 header .mega-submenu .mega-menu-sub .mega-items.casino > a {
   display: block;
+  text-align: center;
 }
 header .mega-submenu .mega-menu-sub .mega-items.casino > a > img {
   margin-bottom: 14px !important;
+}
+header .mega-submenu .mega-menu-sub .mega-items.casino > a > span {
+  padding: 10px 0;
+  display: inline-block;
 }
 header .mega-submenu .mega-menu-sub .mega-items.casino:hover {
   cursor: pointer;
@@ -563,9 +594,14 @@ header .mega-submenu .mega-menu-sub .mega-items.slot img {
 }
 header .mega-submenu .mega-menu-sub .mega-items.slot > a {
   display: block;
+  text-align: center;
 }
 header .mega-submenu .mega-menu-sub .mega-items.slot > a > img {
   margin-bottom: 0px !important;
+}
+header .mega-submenu .mega-menu-sub .mega-items.slot > a > span {
+  padding: 10px 0;
+  display: inline-block;
 }
 header .mega-submenu .mega-menu-sub .mega-items.slot:hover {
   cursor: pointer;
@@ -588,7 +624,7 @@ header.mega-menu-hidden.mega-menu-on .mega-submenu {
   display: block;
   visibility: visible;
   opacity: 1;
-  height: 220px;
+  height: 247px;
   overflow: hidden;
 }
 header.mega-menu-hidden.mega-menu-on .mega-submenu .mega-menu-sub.on {

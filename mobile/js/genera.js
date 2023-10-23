@@ -29,7 +29,7 @@ $(function(){
     var slideno = $(this).data('game-tab');
     $('.games-container').slick('slickGoTo', slideno - 1);
     $('.game-tab[data-game-tab]').removeClass('active');
-    this.classList.add('active').siblings().removeClass("active");
+    this.classList.add('active');
   });
 // replace getSlideCount and getNavigableIndexes without rehosting hack
 
