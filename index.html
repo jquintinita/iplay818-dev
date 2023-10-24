@@ -11,7 +11,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <header class="mega-menu-hidden mega-menu-on">
+    <header class="mega-menu-hidden ">
         <div class="container">
             <nav>
                 <div class="nav-logo"><img src="img/logo_app2-2@2x.png" alt="iplay818 logo" width="185px" /> </div>
@@ -32,50 +32,51 @@
                 </div>
                 <div class="nav-user-login">
                     <div class="tranlation-div">
-                        <div class="lang-toggle lang_MS"></div>
+                        <div  id="langToggle" role="button" class="lang_MS"></div>
                         <div class="lang-menu" >
+                            <button class="close-lang">X</button>
                             <ul>
-                                <li>
+                                <li data-lang="TH">
                                     <div class="country-flag">
                                         <img src="img/thai_flag.svg"/>
                                     </div>
                                     <div>
                                         <div class="country">Thailand</div>
                                         <div class="lang-option">
-                                            <span>English</span> | <span>ภาษาไทย</span>
+                                            <span data-country-lang="en_TH">English</span> | <span class="disable">ภาษาไทย</span>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li data-lang="ID">
                                     <div class="country-flag">
                                         <img src="img/indonesia_flag.svg"/>
                                     </div>
                                     <div>
                                         <div class="country">Indonisia</div>
                                         <div class="lang-option">
-                                            <span>English</span> | <span>Bha indonesia</span>
+                                            <span data-country-lang="en_ID">English</span> | <span class="disable">Bha indonesia</span>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li data-lang="MS">
                                     <div class="country-flag">
                                         <img src="img/malay_flag.svg"/>
                                     </div>
                                     <div>
                                         <div class="country">Malaysia</div>
                                         <div class="lang-option">
-                                            <span>English</span> | <span>简体中文</span> | <span>Malay</span> 
+                                            <span data-country-lang="en_MS">English</span> | <span data-country-lang="zh_MS">简体中文</span> | <span data-country-lang="ms_MS">Malay</span> 
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li data-lang="VI">
                                     <div class="country-flag">
                                         <img src="img/vietnam_flag.svg"/>
                                     </div>
                                     <div>
                                         <div class="country">Vietnam</div>
                                         <div class="lang-option">
-                                            <span>English</span> | <span>Tiếng Việt</span>
+                                            <span data-country-lang="en_VI">English</span> | <span class="disable">Tiếng Việt</span>
                                         </div>
                                     </div>
                                 </li>
@@ -205,7 +206,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-submenu="poker" class="mega-menu-sub on">
+                <div data-submenu="poker" class="mega-menu-sub">
                     <div class="container">
                         <div class="flex-row">
                             <div class="poker-megamenu clients-megamenu">

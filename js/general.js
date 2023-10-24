@@ -45,6 +45,42 @@ $(function(){
          }
       });
     
+
+      $("#langToggle").click(function(){
+        var lang;
+        var activeLang;
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(".lang-menu").css({
+            "height": "0",
+            "opacity": "0"
+          })
+        }
+        else{
+          $(this).addClass("active");
+          $(".lang-option > span").click(function(){
+            lang = $(this).data("country-lang")
+            console.log("Country-Language: " + lang);
+            console.log("Country: " + lang.split("_")[1]);
+           $("#langToggle").removeClass().addClass("lang_" + lang.split("_")[1])
+          });
+
+          $(".lang-menu").css({
+            "height": "auto",
+            "opacity": "1"
+          })
+        }
+
+        $(".close-lang").click(function(){
+          $("#langToggle").removeClass("active");
+          $(".lang-menu").css({
+            "height": "0",
+            "opacity": "0"
+          })
+        });
+      });
+
+
       $(".nav-menu-list > li").hover(function(){
         console.log($(this).attr("data-nav"));
         var navActive = $(this).attr("data-nav");
