@@ -319,8 +319,12 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-  background: #FFFFFF;
+  background: rgba(249, 250, 255, 0.1725490196);
   z-index: 999;
+  transition: all 100ms linear;
+}
+header.sticky {
+  background: #f9faff;
 }
 header nav {
   position: relative;
@@ -375,7 +379,7 @@ header nav .nav-menu .nav-menu-list > li > a > img {
   margin-bottom: 5px;
 }
 header nav .nav-menu .nav-menu-list > li:last-child {
-  margin-left: 50px;
+  margin-left: 0px;
 }
 header nav .nav-menu .nav-menu-list > li:hover {
   background: transparent linear-gradient(180deg, #A6D2F7 0%, #2595F2 19%, #257EC7 77%, #32A0FA 100%);
@@ -454,7 +458,37 @@ header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu .poker {
 header .mega-submenu .mega-menu-sub .flex-row .poker-megamenu + .qr-box {
   flex: 0 calc(15% - 30px);
 }
+header .mega-submenu .mega-menu-sub .flex-row .fishing-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  justify-content: center;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+}
+header .mega-submenu .mega-menu-sub .flex-row .fishing-megamenu .fishing {
+  width: 280px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .fishing-megamenu + .qr-box {
+  flex: 0 calc(15% - 30px);
+}
 header .mega-submenu .mega-menu-sub .flex-row .esports-megamenu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  justify-content: center;
+  flex: 0 calc(85% - 30px);
+  width: 100%;
+  max-height: 218px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .esports-megamenu .esports {
+  width: 280px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .esports-megamenu .esports img {
+  display: block;
+  margin: 0 auto;
+}
+header .mega-submenu .mega-menu-sub .flex-row .lotto-megamenu {
   display: flex;
   flex-wrap: nowrap;
   gap: 40px;
@@ -462,14 +496,12 @@ header .mega-submenu .mega-menu-sub .flex-row .esports-megamenu {
   width: 100%;
   max-height: 218px;
 }
-header .mega-submenu .mega-menu-sub .flex-row .lotto-megamenu {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 40px;
-  flex: 0 calc(85% - 30px);
-  width: 100%;
-  max-height: 218px;
+header .mega-submenu .mega-menu-sub .flex-row .lotto-megamenu .lotto {
+  width: 280px;
+}
+header .mega-submenu .mega-menu-sub .flex-row .lotto-megamenu .lotto img {
+  display: block;
+  margin: 0 auto;
 }
 header .mega-submenu .mega-menu-sub .flex-row .promo-megamenu {
   display: flex;
@@ -525,6 +557,12 @@ header .mega-submenu .mega-menu-sub .mega-items a {
 header .mega-submenu .mega-menu-sub .mega-items a > span {
   padding: 10px 0;
 }
+header .mega-submenu .mega-menu-sub .mega-items:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
 header .mega-submenu .mega-menu-sub .mega-items.sports {
   position: relative;
 }
@@ -567,6 +605,30 @@ header .mega-submenu .mega-menu-sub .mega-items.poker:hover {
   cursor: pointer;
 }
 header .mega-submenu .mega-menu-sub .mega-items.poker:hover > img {
+  filter: drop-shadow(5px 5px 5px var(--celestial-blue));
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing {
+  position: relative;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing img {
+  margin: 0 auto 0;
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing > a {
+  display: block;
+  text-align: center;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing > a img {
+  display: block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing > a > span {
+  padding: 10px 0;
+  display: inline-block;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing:hover {
+  cursor: pointer;
+}
+header .mega-submenu .mega-menu-sub .mega-items.fishing:hover > img {
   filter: drop-shadow(5px 5px 5px var(--celestial-blue));
 }
 header .mega-submenu .mega-menu-sub .mega-items.casino img {
@@ -638,6 +700,65 @@ a.qr-code-bg {
   width: 150px;
   height: 175px;
   background-size: contain;
+}
+
+.nav-user-login {
+  display: flex;
+  align-items: center;
+}
+
+.tranlation-div {
+  position: relative;
+  padding: 0 20px;
+}
+.tranlation-div .lang-toggle {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain;
+}
+.tranlation-div .lang-toggle.lang_TH {
+  background-image: url(../img/thai_flag.svg);
+}
+.tranlation-div .lang-toggle.lang_MS {
+  background-image: url(../img/malay_flag.svg);
+}
+.tranlation-div .lang-toggle.lang_ID {
+  background-image: url(../img/indonesia_flag.svg);
+}
+.tranlation-div .lang-toggle.lang_VI {
+  background-image: url(../img/vietnam_flag.svg);
+}
+.tranlation-div .lang-menu {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  right: 0;
+  top: 45px;
+  width: 204px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.tranlation-div .lang-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.tranlation-div .lang-menu ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1B4263;
+  padding: 5px 0;
+}
+.tranlation-div .lang-menu ul li .country {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.tranlation-div .lang-menu ul li .lang-option {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .banner-section {

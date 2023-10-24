@@ -30,11 +30,20 @@ $(function(){
         dots: false,
         arrows: true,
         infinite: false,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       });
     
-      
+      $(window).bind('scroll', function() {
+        var navHeight = $('header').height();
+        if ($(window).scrollTop() > navHeight) {
+          $('header').addClass('sticky');
+          
+         }
+        else {
+          $('header').removeClass('sticky');
+         }
+      });
     
       $(".nav-menu-list > li").hover(function(){
         console.log($(this).attr("data-nav"));
