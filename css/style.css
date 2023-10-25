@@ -15,6 +15,8 @@
   --dark-bluesh:#798B9C;
   --skyblue:#4bacff;
   --cyan-blue: #4EECE2;
+  --dark-violet: #20375E;
+  --btnhover: #337dbd;
 }
 
 :lang(en) {
@@ -115,6 +117,10 @@ p {
 .small-text {
   font-size: var(--smallFontsize);
   font-weight: 500;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .download-sec {
@@ -285,6 +291,11 @@ p {
   display: block;
 }
 
+.login-body {
+  background-image: url(../img/bg-white-login.png);
+  background-size: cover;
+}
+
 @font-face {
   font-family: "PingFang SC";
   src: url("./fonts/PingFangSCBold.woff2") format("woff2"), url("./fonts/PingFangSCBold.woff") format("woff"), url("./fonts/PingFangSCBold.ttf") format("truetype");
@@ -340,7 +351,7 @@ header nav .nav-menu {
   align-items: center;
   font-size: 14px;
   color: var(--dark-bluesh);
-  margin-left: 30px;
+  margin-left: 10px;
   align-self: flex-start;
   align-items: flex-start;
   height: 100%;
@@ -770,6 +781,69 @@ a.qr-code-bg {
   cursor: pointer;
 }
 
+.account-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+}
+.account-bar .user-avatar {
+  width: 36px;
+  height: 36px;
+}
+.account-bar .user-avatar img {
+  width: 100%;
+  height: auto;
+}
+.account-bar .user-balance {
+  display: flex;
+  flex-wrap: wrap;
+}
+.account-bar .user-balance .balance-notif {
+  flex: 0 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.account-bar .user-balance .balance-notif small {
+  font-size: 12px;
+}
+.account-bar .user-balance .balance-notif .notification {
+  width: 24px;
+  height: 28px;
+  background-image: url(../img/bell2x.png);
+  background-size: contain;
+  display: block;
+  margin-left: 5px;
+  position: relative;
+}
+.account-bar .user-balance .balance-notif .notification .count {
+  width: 16px;
+  height: 16px;
+  right: -2px;
+  position: absolute;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+}
+.account-bar .user-balance .amount-label {
+  flex: 0 100%;
+  font-size: 18px;
+  color: var(--skyblue);
+  font-weight: 900;
+}
+.account-bar .user-balance .amount-label .refresh-balance {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-image: url(../img/refresh.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .banner-section {
   width: 100%;
   height: auto;
@@ -1048,4 +1122,117 @@ footer .footer-link .link_item a {
   padding: 0 20px;
   color: #888FA5;
   text-decoration: none;
+}
+
+.login-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-body .login-wrapper {
+  width: 360px;
+  height: auto;
+}
+.login-body .login-wrapper .logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.login-body form {
+  margin-top: 20px;
+  --input-height: 42px;
+}
+.login-body form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.login-body form .form-group .form-input-icon {
+  width: 49px;
+  height: var(--input-height);
+  border-radius: 5px 0px 0px 5px;
+  background-color: var(--skyblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-body form .form-group .form-input {
+  height: var(--input-height);
+  background-color: #DFDFDF;
+  border-radius: 0px 6px 6px 0px;
+  border: none;
+  flex: 1 1;
+  outline: none;
+  padding: 10px 20px 10px 10px;
+  font-family: "PingFang SC";
+  color: var(--dark-bluesh);
+  transition: all 200ms linear;
+}
+.login-body form .form-group .form-input::-moz-placeholder {
+  color: #fff;
+}
+.login-body form .form-group .form-input::placeholder {
+  color: #fff;
+}
+.login-body form .form-group .form-input:active, .login-body form .form-group .form-input:focus {
+  background-color: var(--dark-bluesh);
+  color: #fff;
+}
+.login-body form .form-group.last-child {
+  margin-bottom: 8px;
+}
+.login-body form .form-label p {
+  font-size: 14px;
+  text-decoration: none !important;
+  color: var(--dark-violet);
+  font-weight: 900;
+  font-family: "PingFang SC";
+}
+.login-body form .form-label label {
+  font-size: 12px;
+}
+.login-body form .form-label a {
+  font-size: 14px;
+  text-decoration: none !important;
+  color: var(--dark-violet);
+  font-weight: 900;
+  font-family: "PingFang SC";
+}
+.login-body form .form-label a:hover {
+  color: var(--skyblue);
+}
+.login-body form .form-label.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.login-body form .form-submit {
+  margin: 8px auto;
+  background-color: var(--skyblue);
+  width: 100%;
+  text-align: center;
+  border: none;
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff;
+  font-family: "PingFang SC";
+  border-radius: 5px;
+  height: calc(var(--input-height) + 2px);
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+.login-body form .form-submit:hover {
+  background-color: var(--btnhover);
+}
+
+.validation {
+  width: 100%;
+  font-size: 12px;
+  padding: 4px 0;
+  font-weight: 600;
+}
+.validation.warning {
+  color: red;
 }

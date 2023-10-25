@@ -1,0 +1,117 @@
+
+
+
+.login-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .login-wrapper{
+        width: 360px;
+        height: auto;
+        .logo{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    form{
+        margin-top: 20px;
+        --input-height: 42px;
+        .form-group{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            width: 100%;
+            .form-input-icon{
+                width: 49px;
+                height: var(--input-height);
+                border-radius: 5px 0px 0px 5px;
+                background-color: var(--skyblue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .form-input{
+                height: var(--input-height);
+                background-color: #DFDFDF;
+                border-radius: 0px 6px 6px 0px;
+                border: none;
+                flex: 1 1;
+                outline: none;
+                padding: 10px 20px 10px 10px;
+                font-family: 'PingFang SC';
+                color: var(--dark-bluesh);
+                transition: all 200ms linear;
+                &::placeholder{
+                    color: #fff;
+                }
+                &:active, &:focus{
+                    background-color: var(--dark-bluesh);
+                    color: #fff;
+                }
+            }
+            &.last-child{
+                margin-bottom: 8px;
+            }
+            
+        }
+        .form-label {
+            p{
+                font-size: 14px;
+                text-decoration: none !important;
+                color: var(--dark-violet);
+                font-weight: 900;
+                font-family:  'PingFang SC';
+            }
+            label{
+                font-size: 12px;
+            }
+            a{
+                font-size: 14px;
+                text-decoration: none !important;
+                color: var(--dark-violet);
+                font-weight: 900;
+                font-family:  'PingFang SC';
+                &:hover{
+                    color: var(--skyblue);
+                }
+
+            }
+            &.space-between{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .form-submit{
+            margin: 8px auto;
+            background-color: var(--skyblue);
+            width: 100%;
+            text-align: center;
+            border: none;
+            font-weight: 500;
+            font-size: 22px;
+            color: #fff;
+            font-family:  'PingFang SC';
+            border-radius: 5px;
+            height: calc(var(--input-height) + 2px);
+            cursor: pointer;
+            transition: all 200ms linear;
+            &:hover{
+                background-color: var(--btnhover);
+            }
+        }
+    }
+}
+
+
+.validation{
+    width: 100%;
+    font-size: 12px;
+    padding: 4px 0;
+    font-weight: 600;
+    &.warning{
+        color: red;
+    }
+}

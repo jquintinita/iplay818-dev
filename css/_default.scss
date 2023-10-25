@@ -16,7 +16,8 @@
     --dark-bluesh:#798B9C;
     --skyblue:#4bacff;
     --cyan-blue: #4EECE2;
-    
+    --dark-violet: #20375E;
+    --btnhover: #337dbd;
 }
 :lang(en){
     --fontSize:16px;
@@ -103,6 +104,10 @@ p{
 .small-text{
     font-size: var(--smallFontsize);
     font-weight: 500;
+}
+
+.text-right{
+    text-align: right;
 }
 
 .download-sec{
@@ -276,4 +281,10 @@ p{
             }
         }
     }
+}
+
+
+.login-body{
+    background-image: url(../img/bg-white-login.png);
+    background-size: cover;
 }
