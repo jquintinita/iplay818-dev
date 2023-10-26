@@ -1,4 +1,49 @@
 $(function(){
+  //NAVIGATION
+  $(".nav-burger-btn").click(function(){
+    $("#sideNavigation").css("left", "0");
+    $(".btn-close").click(function(){
+      $("#sideNavigation").css("left", "-120%");
+    })
+  })
+
+
+  //LANGUAGE TOGGLE
+  $("#langToggle").click(function(){
+    var lang;
+    var activeLang;
+    if($(this).hasClass("active")){
+      $(this).removeClass("active");
+      $(".lang-menu").css({
+        "height": "0",
+        "opacity": "0"
+      })
+    }
+    else{
+      $(this).addClass("active");
+      $(".lang-option > span").click(function(){
+        lang = $(this).data("country-lang")
+        console.log("Country-Language: " + lang);
+        console.log("Country: " + lang.split("_")[1]);
+       $("#langToggle").removeClass().addClass("lang_" + lang.split("_")[1])
+      });
+
+      $(".lang-menu").css({
+        "height": "auto",
+        "opacity": "1"
+      })
+    }
+
+    $(".close-lang").click(function(){
+      $("#langToggle").removeClass("active");
+      $(".lang-menu").css({
+        "opacity": "0",
+        "height": "0"
+      })
+    });
+  });
+
+
 
   $('.banner-slider').slick({
     dots: false,
@@ -32,6 +77,10 @@ $(function(){
     this.classList.add('active');
   });
 // replace getSlideCount and getNavigableIndexes without rehosting hack
+
+
+
+
 
 $(".games-container").each(function() {
   this.slick.getSlideCount = function() {

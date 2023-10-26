@@ -700,11 +700,11 @@ a.qr-code-bg {
   align-items: center;
 }
 
-.tranlation-div {
+.translation-div {
   position: relative;
   padding: 0 20px;
 }
-.tranlation-div #langToggle {
+.translation-div #langToggle {
   width: 20px;
   height: 20px;
   display: block;
@@ -712,19 +712,19 @@ a.qr-code-bg {
   transition: all 100ms linear;
   cursor: pointer;
 }
-.tranlation-div #langToggle.lang_TH {
+.translation-div #langToggle.lang_TH {
   background-image: url(../img/thai_flag.svg);
 }
-.tranlation-div #langToggle.lang_MS {
+.translation-div #langToggle.lang_MS {
   background-image: url(../img/malay_flag.svg);
 }
-.tranlation-div #langToggle.lang_ID {
+.translation-div #langToggle.lang_ID {
   background-image: url(../img/indonesia_flag.svg);
 }
-.tranlation-div #langToggle.lang_VI {
+.translation-div #langToggle.lang_VI {
   background-image: url(../img/vietnam_flag.svg);
 }
-.tranlation-div .lang-menu {
+.translation-div .lang-menu {
   transition: all 140ms ease-in;
   height: 0;
   opacity: 0;
@@ -737,11 +737,11 @@ a.qr-code-bg {
   width: 214px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
-.tranlation-div .lang-menu ul {
+.translation-div .lang-menu ul {
   margin: 0;
   padding: 0;
 }
-.tranlation-div .lang-menu ul li {
+.translation-div .lang-menu ul li {
   list-style: none;
   display: flex;
   align-items: center;
@@ -749,26 +749,26 @@ a.qr-code-bg {
   color: #1B4263;
   padding: 5px 0;
 }
-.tranlation-div .lang-menu ul li .country-flag {
+.translation-div .lang-menu ul li .country-flag {
   width: 20px;
 }
-.tranlation-div .lang-menu ul li .country {
+.translation-div .lang-menu ul li .country {
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-.tranlation-div .lang-menu ul li .lang-option {
+.translation-div .lang-menu ul li .lang-option {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.tranlation-div .lang-menu ul li .lang-option span {
+.translation-div .lang-menu ul li .lang-option span {
   cursor: pointer;
 }
-.tranlation-div .lang-menu ul li .lang-option span.disable {
+.translation-div .lang-menu ul li .lang-option span.disable {
   cursor: not-allowed;
   color: #9BA9B1;
 }
-.tranlation-div .lang-menu .close-lang {
+.translation-div .lang-menu .close-lang {
   position: absolute;
   top: -5px;
   right: -5px;

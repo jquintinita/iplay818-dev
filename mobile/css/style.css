@@ -16,6 +16,7 @@
   --dark-bluesh:#798B9C;
   --skyblue:#4bacff;
   --bg-orginal-color: #E9F5FE;
+  --nav-color-text:#30383F;
 }
 
 body {
@@ -107,6 +108,9 @@ header .header-wrapper {
   justify-content: space-between;
   align-items: center;
 }
+header .header-wrapper .logo-div {
+  flex: 60%;
+}
 header .header-wrapper .logo-div .logo-holder {
   width: 44vw;
   color: transparent;
@@ -114,11 +118,217 @@ header .header-wrapper .logo-div .logo-holder {
   height: 11vw;
   display: block;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   max-width: 40vw;
+  margin: 0 auto;
+}
+header .header-wrapper .right-menu {
+  flex: 0 20%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .header-wrapper .right-menu .login-bar a {
+  font-size: 3vw;
+  text-decoration: none;
+  color: var(--dark-bluesh);
+  font-weight: 900;
 }
 header .header-wrapper .right-menu img {
   height: 5vw;
+}
+header .header-wrapper .nav-burger-btn {
+  flex: 0 20%;
+  --burgerline: 0.68vw;
+}
+header .header-wrapper .nav-burger-btn .burger-btn {
+  width: 5vw;
+  height: 4vw;
+  position: relative;
+  display: block;
+  background-color: transparent;
+}
+header .header-wrapper .nav-burger-btn .burger-btn i {
+  width: 100%;
+  display: block;
+  height: var(--burgerline);
+  background-color: #30383F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-radius: 2px;
+  transition: all 200ms linear;
+}
+header .header-wrapper .nav-burger-btn .burger-btn::before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: var(--burgerline);
+  background-color: #30383F;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  border-radius: 2px;
+  transition: all 200ms linear;
+}
+header .header-wrapper .nav-burger-btn .burger-btn::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: var(--burgerline);
+  background-color: #30383F;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  border-radius: 2px;
+  transition: all 200ms linear;
+}
+
+/*
+NAVIGATION
+*/
+nav {
+  position: fixed;
+  width: 60vw;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99999;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 3vw;
+  left: -120%;
+  transition: all 200ms linear;
+}
+nav .navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+nav .navigation p {
+  text-align: center;
+  font-size: 3vw;
+}
+nav .navigation button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5vw;
+  height: 5vw;
+  border: none;
+}
+nav .navigation .menu-nav {
+  padding: 0;
+  margin: 8vw 0;
+}
+nav .navigation .menu-nav li {
+  list-style: none;
+  padding: 0;
+  display: block;
+  border-top: 1px solid #F8F8F8;
+  border-bottom: 1px solid #F8F8F8;
+}
+nav .navigation .menu-nav li a {
+  display: flex;
+  font-size: 2.8vw;
+  padding: 1.8vw 1.2vw;
+  color: var(--nav-color-text);
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2vw;
+}
+nav .navigation .menu-nav li a > .icon {
+  width: 5vw;
+  height: 5vw;
+  background-color: var(--dark-bluesh);
+  display: inline-block;
+}
+
+.translation-div {
+  position: relative;
+  padding: 0;
+}
+.translation-div #langToggle {
+  width: 5vw;
+  height: 5vw;
+  display: block;
+  background-size: contain;
+  transition: all 100ms linear;
+  cursor: pointer;
+}
+.translation-div #langToggle.lang_TH {
+  background-image: url(../img/thai_flag.svg);
+}
+.translation-div #langToggle.lang_MS {
+  background-image: url(../img/malay_flag.svg);
+}
+.translation-div #langToggle.lang_ID {
+  background-image: url(../img/indonesia_flag.svg);
+}
+.translation-div #langToggle.lang_VI {
+  background-image: url(../img/vietnam_flag.svg);
+}
+.translation-div .lang-menu {
+  transition: all 140ms ease-in;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  right: 0;
+  top: 45px;
+  width: 34vw;
+  z-index: 99;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.translation-div .lang-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.translation-div .lang-menu ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1B4263;
+  padding: 5px 0;
+}
+.translation-div .lang-menu ul li .country-flag {
+  width: 5vw;
+}
+.translation-div .lang-menu ul li .country {
+  font-weight: 900;
+  font-family: "PingFang SC";
+  font-size: 2vw;
+}
+.translation-div .lang-menu ul li .lang-option {
+  font-size: 1.8vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.translation-div .lang-menu ul li .lang-option span {
+  cursor: pointer;
+}
+.translation-div .lang-menu ul li .lang-option span.disable {
+  cursor: not-allowed;
+  color: #9BA9B1;
+}
+.translation-div .lang-menu .close-lang {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 26px;
+  height: 26px;
+  background-color: #878787;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 footer {
