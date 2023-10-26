@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.28" height="20.692" viewBox="0 0 26.28 20.692">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#04bdfb"/>
+      <stop offset="1" stop-color="#0580ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.281" x2="0" y2="0.741" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#505f80"/>
+      <stop offset="0.567" stop-color="#2a3c5d"/>
+      <stop offset="1" stop-color="#2a3c5d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8ecef1"/>
+      <stop offset="1" stop-color="#4291e6"/>
+    </linearGradient>
+  </defs>
+  <g id="Deposit" transform="translate(-201.026 -247.281)">
+    <rect id="矩形_1003" data-name="矩形 1003" width="9.171" height="6.67" transform="translate(216.907 249.042)" fill="#fff"/>
+    <g id="我的钱包" transform="translate(196.898 240.566)">
+      <path id="路径_486" data-name="路径 486" d="M185.532,312.434a1.824,1.824,0,1,1,0-3.639h6.106v-1.513a1.841,1.841,0,0,0-1.9-1.774H168.487a1.841,1.841,0,0,0-1.9,1.774v12.247a1.841,1.841,0,0,0,1.9,1.774H189.74a1.841,1.841,0,0,0,1.9-1.774v-7.095Z" transform="translate(-162.46 -298.793)" fill="#293b50"/>
+      <path id="路径_487" data-name="路径 487" d="M878.647,485.114a1.184,1.184,0,1,0,1.184-1.184A1.184,1.184,0,0,0,878.647,485.114Z" transform="translate(-856.871 -473.292)" fill="#293b50"/>
+    </g>
+    <path id="路径_536" data-name="路径 536" d="M5.2,5.2,0,5.2A5.2,5.2,0,1,0,5.2,0,5.2,5.2,0,0,0,0,5.2Z" transform="translate(216.398 257.065)" stroke="#fff" stroke-width="1" fill="url(#linear-gradient)"/>
+    <line id="直线_159" data-name="直线 159" y2="11.672" transform="translate(203.151 249.459)" fill="none" stroke="#505f80" stroke-width="1" stroke-dasharray="2"/>
+    <circle id="椭圆_2212" data-name="椭圆 2212" cx="0.834" cy="0.834" r="0.834" transform="translate(223.04 247.791)" fill="url(#linear-gradient-2)"/>
+    <path id="矩形_1005" data-name="矩形 1005" d="M2.5,0H8.337a0,0,0,0,1,0,0V5a0,0,0,0,1,0,0H2.5A2.5,2.5,0,0,1,0,2.5v0A2.5,2.5,0,0,1,2.5,0Z" transform="translate(217.741 249.875)" fill="url(#linear-gradient-3)"/>
+    <circle id="椭圆_2213" data-name="椭圆 2213" cx="1.667" cy="1.667" r="1.667" transform="translate(218.575 250.709)" fill="#fff"/>
+    <path id="回收" d="M65.622,92.917a2.1,2.1,0,0,1,.156-.42,2.167,2.167,0,0,1,1.03-1.007l-.271-.579a2.812,2.812,0,0,0-1.577,2.037l-.425.02.828,1.293.706-1.364Zm2.426,2.473a2.244,2.244,0,0,1-.441.075,2.17,2.17,0,0,1-1.388-.389l-.366.523a2.813,2.813,0,0,0,2.552.347l.23.358.7-1.364-1.534.07Zm1.232-3.925.2-.378-1.534.07.828,1.293.207-.4a2.237,2.237,0,0,1,.286.345,2.167,2.167,0,0,1,.357,1.4l.637.056A2.813,2.813,0,0,0,69.28,91.465Z" transform="translate(154.362 168.654)" fill="#fff"/>
+  </g>
+</svg>

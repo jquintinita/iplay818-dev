@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="25.569" viewBox="0 0 30 25.569">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#04bdfb"/>
+      <stop offset="1" stop-color="#0580ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.281" x2="0" y2="0.741" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#505f80"/>
+      <stop offset="0.567" stop-color="#2a3c5d"/>
+      <stop offset="1" stop-color="#2a3c5d"/>
+    </linearGradient>
+  </defs>
+  <g id="Withdraw" transform="translate(15825.102 24121.268)">
+    <path id="减去_2" data-name="减去 2" d="M20.384,22.269H4a4,4,0,0,1-4-4V15.328a4.125,4.125,0,0,0,2.475-3.781A4.124,4.124,0,0,0,0,7.767V4A4,4,0,0,1,4,0H24.868a4,4,0,0,1,4,4V7.767a4.125,4.125,0,0,0,0,7.561v1.836a5.15,5.15,0,0,0-8.484,5.1Z" transform="translate(-15825.102 -24121.268)" fill="#293b50"/>
+    <circle id="椭圆_2208" data-name="椭圆 2208" cx="5.361" cy="5.361" r="5.361" transform="translate(-15815.204 -24115.494)" fill="#fff"/>
+    <path id="路径_539" data-name="路径 539" d="M4.536,4.536,0,4.536A4.536,4.536,0,1,0,4.536,0,4.536,4.536,0,0,0,0,4.536Z" transform="translate(-15804.174 -24104.771)" fill="url(#linear-gradient)"/>
+    <path id="路径_537" data-name="路径 537" d="M304.737,249.246v.946h-6.07v-.971h4.707l-1.065-1.118.67-.7,1.734,1.821h.024v.026Z" transform="translate(-16101.34 -24350.107)" fill="#fff"/>
+    <circle id="椭圆_2209" data-name="椭圆 2209" cx="2.887" cy="2.887" r="2.887" transform="translate(-15803.657 -24120.443)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

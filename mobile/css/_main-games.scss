@@ -72,22 +72,22 @@
                 }
                 &.slots{
                     &::after{
-                        background-image: url(../img/soprtstext@2x.png);
+                        background-image: url(../img/slottext.png);
                     }
                 }
                 &.live{
                     &::after{
-                        background-image: url(../img/soprtstext@2x.png);
+                        background-image: url(../img/livecasinotext.png);
                     }
                 }
                 &.lotto{
                     &::after{
-                        background-image: url(../img/soprtstext@2x.png);
+                        background-image: url(../img/lottotext.png);
                     }
                 }
                 &.fishing{
                     &::after{
-                        background-image: url(../img/soprtstext@2x.png);
+                        background-image: url(../img/fishingtext.png);
                     }
                 }
             }
@@ -107,7 +107,8 @@
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
-            font-size: 2.8vw;
+            font-size: 2.9vw;
+            line-height: 1.2em;
             text-align: center;
             justify-content: center;
             color: #788B9D;
@@ -120,8 +121,8 @@
                 margin: 3px auto 0;
                 background-repeat: no-repeat;
                 &.fav-icon{
-                    background-image: url(../img/game_fav.svg);
-                    background-size: 130%;
+                    background-image: url(../img/hotGames.gif);
+                    background-size: cover;
                     background-position: center top;
                 }
                 &.slot-icon{
@@ -139,29 +140,44 @@
                 &.fish-icon{
                     background-image: url(../img/game_fish@2x.png);
                 }
+                &.fourD-icon{
+                    background-image: url(../img/game-4D2x.png);
+                }
             }
 
             &.active{
                 background-image: url(../img/leftmenu_bg_active@2x.png);
                 color: #fff;
-                .fav-icon{
-                    background-image: url(../img/game_fav_hover.svg);
+                .game-icon{
+                    filter: brightness(0) invert(1);
+                    &.fav-icon{
+                        width: 8.8vw;
+                        height: 8.8vw;
+                        margin-top: 0;
+                        filter: unset;
+                    }
                 }
-                .slot-icon{
-                    background-image: url(../img/game_slot__hover@2x.png);
-                }
-                .sports-icon{
-                    background-image: url(../img/game_sports_hover@2x.png);
-                }
-                .live-icon{
-                    background-image: url(../img/game_livecasino__hover@2x.png);
-                }
-                .lotto-icon{
-                    background-image: url(../img/game_lotto_hover@2x.png);
-                }
-                .fish-icon{
-                    background-image: url(../img/game_fish__hover@2x.png);
-                }
+                // .fav-icon{
+                //     background-image: url(../img/hotGames.gif);
+                // }
+                // .slot-icon{
+                //     background-image: url(../img/game_slot__hover@2x.png);
+                // }
+                // .sports-icon{
+                //     background-image: url(../img/game_sports_hover@2x.png);
+                // }
+                // .live-icon{
+                //     background-image: url(../img/game_livecasino__hover@2x.png);
+                // }
+                // .lotto-icon{
+                //     background-image: url(../img/game_lotto_hover@2x.png);
+                // }
+                // .fish-icon{
+                //     background-image: url(../img/game_fish__hover@2x.png);
+                // }
+                // .fourD-icon{
+                //     background-image: url(../img/game-4D-active2x.png);
+                // }
             }
         }
     }

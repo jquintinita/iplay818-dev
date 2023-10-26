@@ -25,48 +25,58 @@ footer{
             color: var(--dark-bluesh);
             .menu-icon{
                 width: 5.33333vw;
-                height: 5.33333vw;
-                margin-top: 1.06667vw;
+                height: 5.2vw;
+                margin-top: 1.4vw;
                 margin-bottom: 1vw;
-                background-size: cover;
-                &.gaming{
-                    background-image: url(../img/app_gaming@2x.png);
-                }
-                &.bet-list{
-                    background-image: url(../img/app_betlist@2x.png);
-                }
+                background-size: contain;
+                background-repeat: no-repeat;
                 &.home{
+                    background-image: url(../img/home_icon@2x.png);
+                }
+                &.discount{
+                    background-image: url(../img/prom_icon@2x.png);
+                }
+                &.deposit{
                     width: 12vw;
                     height: 12vw;
-                    top: -6.4vw;
+                    top: -7.4vw;
                     position: absolute;
-                    background-image: url(../img/app_home@2x.png);
+                    background-image: url(../img/deposit_Ani.gif);
+                    background-color: #fff;
+                    border-radius: 50%;
+                    background-position-y: 1vw;
+                    border: 0.5vw solid #95abcf8f;
+                    box-shadow: 0vw 1vw 1vw rgba($color: #576b8b, $alpha: 0.2);
                     + .menu-name{
                         margin-top: 7.4vw;
                     }
                 }
-                &.prom{
-                    background-image: url(../img/app_prom@2x.png);
+                &.promo{
+                    background-image: url(../img/Affiliate_icon@2x.png);
                 }
                 &.profile{
-                    background-image: url(../img/app_my@2x.png);
+                    background-image: url(../img/my_icon@2x.png);
                 }
             }
-            &.active{
-                .gaming{
-                    background-image: url(../img/app_gaming_active@2x.png);
-                }
-                .bet-list{
-                    background-image: url(../img/app_betlist_active@2x.png);
-                }
+            &.active, &:hover{
+                cursor: pointer;
                 .home{
-                    background-image: url(../img/app_home_hover@2x.png);
+                    background-image: url(../img/home_icon_active@2x.png);
                 }
-                .prom{
-                    background-image: url(../img/app_prom_active@2x.png);
+                .discount{
+                    background-image: url(../img/prom_iconHover@2x.png);
+                }
+                .deposit{
+                    background-image: url(../img/deposit_Ani.gif);
+                }
+                .promo{
+                    background-image: url(../img/Affiliate_iconHover@2x.png);
                 }
                 .profile{
-                    background-image: url(../img/app_my_active@2x.png);
+                    background-image: url(../img/my_iconHover@2x.png);
+                }
+                .menu-name{
+                    color:var(--skyblue);
                 }
             }
         }

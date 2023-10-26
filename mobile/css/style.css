@@ -64,9 +64,116 @@ body {
 .right-bar > a {
   display: block;
 }
+.right-bar > a > img {
+  width: 22vw;
+}
 
 .page-container {
   overflow-y: auto;
+}
+
+.login-bar {
+  display: flex;
+  padding: 1vw 0 2vw;
+  gap: 2vw;
+  flex: 0 100%;
+  justify-content: center;
+}
+.login-bar .btn-primary {
+  display: block;
+  text-align: center;
+  min-width: 22vw;
+  padding: 1.4vw 4vw;
+  border-radius: 4vw;
+  color: #fff;
+  font-size: 3vw;
+  font-family: "PingFang SC", Microsoft YaHei, Helvetica, sans-serif;
+  text-decoration: none;
+  transition: all 200ms linear;
+  background: transparent linear-gradient(358deg, #2290FF 0%, #39CAFF 100%) 0% 0% no-repeat padding-box;
+}
+.login-bar .btn-primary:hover {
+  background: transparent linear-gradient(180deg, #33475B 0%, #515874 100%) 0% 0% no-repeat padding-box;
+}
+
+.user-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 95%;
+  margin: 0 auto 2vw;
+  align-items: flex-end;
+}
+.user-bar .account-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  align-items: flex-end;
+}
+.user-bar .account-bar .user-avatar {
+  width: 7.5vw;
+  height: 7.5vw;
+}
+.user-bar .account-bar .user-avatar img {
+  width: 100%;
+  height: auto;
+}
+.user-bar .account-bar .user-balance {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-bar .account-bar .user-balance .balance-notif {
+  flex: 0 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.user-bar .account-bar .user-balance .balance-notif small {
+  font-size: 2vw;
+  color: var(--dark-bluesh);
+}
+.user-bar .account-bar .user-balance .amount-label {
+  flex: 0 100%;
+  font-size: 3vw;
+  color: var(--skyblue);
+  font-weight: 900;
+}
+.user-bar .account-bar .user-balance .amount-label .refresh-balance {
+  width: 3vw;
+  height: 3vw;
+  display: inline-block;
+  background-image: url(../img/reload.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-left: 0.5vw;
+}
+.user-bar .myaccount-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  align-items: center;
+  flex: 1 1;
+}
+.user-bar .myaccount-menu a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.user-bar .myaccount-menu a img {
+  height: 6vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+  text-decoration: none;
+}
+.user-bar .myaccount-menu a > span {
+  color: #30383F;
+  text-decoration: none;
+  font-size: 2.4vw;
 }
 
 @font-face {
@@ -221,6 +328,7 @@ nav .navigation button {
   width: 5vw;
   height: 5vw;
   border: none;
+  font-size: 3.75vw;
 }
 nav .navigation .menu-nav {
   padding: 0;
@@ -235,8 +343,8 @@ nav .navigation .menu-nav li {
 }
 nav .navigation .menu-nav li a {
   display: flex;
-  font-size: 2.8vw;
-  padding: 1.8vw 1.2vw;
+  font-size: 3.75vw;
+  padding: 3vw 1.2vw;
   color: var(--nav-color-text);
   flex-wrap: nowrap;
   align-items: center;
@@ -361,52 +469,79 @@ footer .footer-menu .footer-menu-items {
 }
 footer .footer-menu .footer-menu-items .menu-icon {
   width: 5.33333vw;
-  height: 5.33333vw;
-  margin-top: 1.06667vw;
+  height: 5.2vw;
+  margin-top: 1.4vw;
   margin-bottom: 1vw;
-  background-size: cover;
-}
-footer .footer-menu .footer-menu-items .menu-icon.gaming {
-  background-image: url(../img/app_gaming@2x.png);
-}
-footer .footer-menu .footer-menu-items .menu-icon.bet-list {
-  background-image: url(../img/app_betlist@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 footer .footer-menu .footer-menu-items .menu-icon.home {
+  background-image: url(../img/home_icon@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.discount {
+  background-image: url(../img/prom_icon@2x.png);
+}
+footer .footer-menu .footer-menu-items .menu-icon.deposit {
   width: 12vw;
   height: 12vw;
-  top: -6.4vw;
+  top: -7.4vw;
   position: absolute;
-  background-image: url(../img/app_home@2x.png);
+  background-image: url(../img/deposit_Ani.gif);
+  background-color: #fff;
+  border-radius: 50%;
+  background-position-y: 1vw;
+  border: 0.5vw solid rgba(149, 171, 207, 0.5607843137);
+  box-shadow: 0vw 1vw 1vw rgba(87, 107, 139, 0.2);
 }
-footer .footer-menu .footer-menu-items .menu-icon.home + .menu-name {
+footer .footer-menu .footer-menu-items .menu-icon.deposit + .menu-name {
   margin-top: 7.4vw;
 }
-footer .footer-menu .footer-menu-items .menu-icon.prom {
-  background-image: url(../img/app_prom@2x.png);
+footer .footer-menu .footer-menu-items .menu-icon.promo {
+  background-image: url(../img/Affiliate_icon@2x.png);
 }
 footer .footer-menu .footer-menu-items .menu-icon.profile {
-  background-image: url(../img/app_my@2x.png);
+  background-image: url(../img/my_icon@2x.png);
 }
-footer .footer-menu .footer-menu-items.active .gaming {
-  background-image: url(../img/app_gaming_active@2x.png);
+footer .footer-menu .footer-menu-items.active, footer .footer-menu .footer-menu-items:hover {
+  cursor: pointer;
 }
-footer .footer-menu .footer-menu-items.active .bet-list {
-  background-image: url(../img/app_betlist_active@2x.png);
+footer .footer-menu .footer-menu-items.active .home, footer .footer-menu .footer-menu-items:hover .home {
+  background-image: url(../img/home_icon_active@2x.png);
 }
-footer .footer-menu .footer-menu-items.active .home {
-  background-image: url(../img/app_home_hover@2x.png);
+footer .footer-menu .footer-menu-items.active .discount, footer .footer-menu .footer-menu-items:hover .discount {
+  background-image: url(../img/prom_iconHover@2x.png);
 }
-footer .footer-menu .footer-menu-items.active .prom {
-  background-image: url(../img/app_prom_active@2x.png);
+footer .footer-menu .footer-menu-items.active .deposit, footer .footer-menu .footer-menu-items:hover .deposit {
+  background-image: url(../img/deposit_Ani.gif);
 }
-footer .footer-menu .footer-menu-items.active .profile {
-  background-image: url(../img/app_my_active@2x.png);
+footer .footer-menu .footer-menu-items.active .promo, footer .footer-menu .footer-menu-items:hover .promo {
+  background-image: url(../img/Affiliate_iconHover@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .profile, footer .footer-menu .footer-menu-items:hover .profile {
+  background-image: url(../img/my_iconHover@2x.png);
+}
+footer .footer-menu .footer-menu-items.active .menu-name, footer .footer-menu .footer-menu-items:hover .menu-name {
+  color: var(--skyblue);
 }
 
+.banner-slider {
+  margin-bottom: 0px !important;
+}
 .banner-slider img {
   width: 100%;
   height: auto;
+}
+.banner-slider .slick-dots {
+  bottom: 10px;
+}
+.banner-slider .slick-dots li button:before {
+  font-size: 15px;
+  opacity: 1 !important;
+  color: #fff;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+.banner-slider .slick-dots li.slick-active button:before {
+  color: var(--skyblue);
 }
 
 .main-wrapper {
@@ -483,16 +618,16 @@ footer .footer-menu .footer-menu-items.active .profile {
   background-image: url(../img/soprtstext@2x.png);
 }
 .main-wrapper .games .games-cards .game-clients.slots::after {
-  background-image: url(../img/soprtstext@2x.png);
+  background-image: url(../img/slottext.png);
 }
 .main-wrapper .games .games-cards .game-clients.live::after {
-  background-image: url(../img/soprtstext@2x.png);
+  background-image: url(../img/livecasinotext.png);
 }
 .main-wrapper .games .games-cards .game-clients.lotto::after {
-  background-image: url(../img/soprtstext@2x.png);
+  background-image: url(../img/lottotext.png);
 }
 .main-wrapper .games .games-cards .game-clients.fishing::after {
-  background-image: url(../img/soprtstext@2x.png);
+  background-image: url(../img/fishingtext.png);
 }
 .main-wrapper .games-menu {
   flex: 0 var(--defaultSize);
@@ -508,7 +643,8 @@ footer .footer-menu .footer-menu-items.active .profile {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  font-size: 2.8vw;
+  font-size: 2.9vw;
+  line-height: 1.2em;
   text-align: center;
   justify-content: center;
   color: #788B9D;
@@ -523,8 +659,8 @@ footer .footer-menu .footer-menu-items.active .profile {
   background-repeat: no-repeat;
 }
 .main-wrapper .games-menu .game-tab .game-icon.fav-icon {
-  background-image: url(../img/game_fav.svg);
-  background-size: 130%;
+  background-image: url(../img/hotGames.gif);
+  background-size: cover;
   background-position: center top;
 }
 .main-wrapper .games-menu .game-tab .game-icon.slot-icon {
@@ -542,25 +678,19 @@ footer .footer-menu .footer-menu-items.active .profile {
 .main-wrapper .games-menu .game-tab .game-icon.fish-icon {
   background-image: url(../img/game_fish@2x.png);
 }
+.main-wrapper .games-menu .game-tab .game-icon.fourD-icon {
+  background-image: url(../img/game-4D2x.png);
+}
 .main-wrapper .games-menu .game-tab.active {
   background-image: url(../img/leftmenu_bg_active@2x.png);
   color: #fff;
 }
-.main-wrapper .games-menu .game-tab.active .fav-icon {
-  background-image: url(../img/game_fav_hover.svg);
+.main-wrapper .games-menu .game-tab.active .game-icon {
+  filter: brightness(0) invert(1);
 }
-.main-wrapper .games-menu .game-tab.active .slot-icon {
-  background-image: url(../img/game_slot__hover@2x.png);
-}
-.main-wrapper .games-menu .game-tab.active .sports-icon {
-  background-image: url(../img/game_sports_hover@2x.png);
-}
-.main-wrapper .games-menu .game-tab.active .live-icon {
-  background-image: url(../img/game_livecasino__hover@2x.png);
-}
-.main-wrapper .games-menu .game-tab.active .lotto-icon {
-  background-image: url(../img/game_lotto_hover@2x.png);
-}
-.main-wrapper .games-menu .game-tab.active .fish-icon {
-  background-image: url(../img/game_fish__hover@2x.png);
+.main-wrapper .games-menu .game-tab.active .game-icon.fav-icon {
+  width: 8.8vw;
+  height: 8.8vw;
+  margin-top: 0;
+  filter: unset;
 }

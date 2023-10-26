@@ -56,9 +56,118 @@ body{
     flex: 0  1;
     > a{
         display: block;
+        > img{
+            width: 22vw;
+        }
     }
 }
 
 .page-container{
     overflow-y: auto;
+}
+
+.login-bar{
+    display: flex;
+    padding: 1vw 0 2vw;
+    gap: 2vw;
+    flex: 0 100%;
+    justify-content: center;
+    .btn-primary{
+        display: block;
+        text-align: center;
+        min-width: 22vw;
+        padding: 1.4vw 4vw;
+        border-radius: 4vw;
+        color: #fff;
+        font-size: 3vw;
+        font-family:  "PingFang SC", Microsoft YaHei, Helvetica, sans-serif;
+        text-decoration: none;
+        transition: all 200ms linear;
+        background: transparent linear-gradient(358deg, #2290FF 0%, #39CAFF 100%) 0% 0% no-repeat padding-box;
+        &:hover{
+            background: transparent linear-gradient(180deg, #33475B 0%, #515874 100%) 0% 0% no-repeat padding-box;
+        }
+    }
+}
+
+
+
+.user-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: 0 auto 2vw;
+    align-items: flex-end;
+    .account-bar{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2vw;
+        align-items: flex-end;
+        .user-avatar{
+            width: 7.5vw;
+            height: 7.5vw;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .user-balance{
+            display: flex;
+            flex-wrap: wrap;
+    
+            .balance-notif{
+                flex: 0 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: baseline;
+                small{
+                    font-size: 2vw;
+                    color: var(--dark-bluesh);
+                }
+                
+            }
+            .amount-label{
+                flex: 0 100%;
+                font-size: 3vw;
+                color: var(--skyblue);
+                font-weight: 900;
+                .refresh-balance{
+                    width: 3vw;
+                    height: 3vw;
+                    display: inline-block;
+                    background-image: url(../img/reload.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    margin-left: 0.5vw;
+                }
+            }
+        }
+    }
+    .myaccount-menu{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 6.5vw;
+        align-items: center;
+        flex: 1 1;
+        a{
+            text-align: center;
+            img{
+                height: 6vw;
+                object-fit: contain;
+                object-position: bottom;
+                text-decoration: none;
+            }
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            > span{
+                color: #30383F;
+                text-decoration: none;
+                font-size: 2.4vw;
+            }
+        }
+    }
 }
