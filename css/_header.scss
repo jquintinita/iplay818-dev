@@ -391,10 +391,17 @@ a{
 .nav-user-login{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex: 0 280px;
+    > .timezone{
+        flex: 0 100%;
+        text-align: right;
+    }
 }
 .translation-div{
     position: relative;
-    padding: 0 20px;
+    padding: 0 0 0 20px;
     #langToggle{
         width: 20px;
         height: 20px;
