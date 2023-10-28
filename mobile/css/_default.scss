@@ -16,6 +16,7 @@
     --skyblue:#4bacff;
     --bg-orginal-color: #E9F5FE;
     --nav-color-text:#30383F;
+    --dark-blue-active: #082e50;
   }
 body{
     background-color: var(--bg-orginal-color);
@@ -179,16 +180,32 @@ body{
     background-repeat: no-repeat;
     background-position: top center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
     .translation-bar{
-        padding: 5vw 0;
+        padding: 0 0 5vw;
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
         width: 100%;
         .lang-menu{
             top: 7vw !important
+        }
+    }
+    .logo{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3vw;
+        > a{
+            display: block;
+            text-align: center;
+            img{
+                width: 50vw;
+            }
         }
     }
 }
@@ -198,28 +215,101 @@ body{
     display: flex;
     flex-wrap: nowrap;
     max-width: 100%;
+    overflow: hidden;
+    border-radius:  2vw 2vw;
     > a{
-        flex: 0 16vw;
+        flex: 0 14vw;
         background-color: #343233;
-        padding: 8vw;
+        padding: 8vw 3vw 8vw 5.6vw;
+        font-size: 4vw;
         word-break: break-all;
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
         text-align: center;
-        border-radius:  2vw 0px  0px 2vw;
+        letter-spacing: 3vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        &.btn-reg{
+            &::before{
+                background-image: url(../img/regist_icon@2x.png);
+                width: 4vw;
+                height: 4vw;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                margin-left: -1.8vw;
+            }
+        }
+        &.btn-login{
+            &::before{
+                background-image: url(../img/login_icon@2x.png);
+                width: 4vw;
+                height: 4vw;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                margin-left: -1.8vw;
+            }
+        }
     }
     .login-form{
         flex: 1;
-        padding: 3vw;
+        padding: 8vw 4vw;
         background: rgba($color: #fff, $alpha: 0.07);
-        border-radius: 0px 2vw 2vw 0px;
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
         .form-title{
             font-size: 5vw;
             color: #fff;
             text-align: center;
+            text-transform: uppercase;
+            font-family:  "PingFang SC", Microsoft YaHei, Helvetica, sans-serif;
+        }
+    }
+}
+
+.provider-wrapper{
+    padding: 3vw 0;
+    p{
+        text-align: center;
+        color: #fff;
+        width: max-content;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 3vw;
+        &:after{
+            width: 13vw;
+            height: 0.1vw;
+            content:"";
+            background-color: #fff;
+            display: block;
+            right:  -100%;
+            position: absolute;
+            top: 50%;
+        }
+        &:before{
+            width: 13vw;
+            height: 0.1vw;
+            content:"";
+            background-color: #fff;
+            display: block;
+            left:  -100%;
+            position: absolute;
+            top: 50%;
+        }
+    }
+    .provider-slider{
+        img{
+            max-width: 100%;
         }
     }
 }

@@ -7,7 +7,10 @@ $(function(){
     })
   })
 
-
+  $(".lang-menu > ul").delay("slow").css({
+    "height": "0",
+    "overflow": "hidden" 
+  })
   //LANGUAGE TOGGLE
   $("#langToggle").click(function(){
     var lang;
@@ -18,6 +21,7 @@ $(function(){
         "height": "0",
         "opacity": "0"
       })
+     
     }
     else{
       $(this).addClass("active");
@@ -31,6 +35,10 @@ $(function(){
       $(".lang-menu").css({
         "height": "auto",
         "opacity": "1"
+      });
+      $(".lang-menu > ul").delay("slow").css({
+        "height": "auto",
+        "overflow": "hidden" 
       })
     }
 
@@ -39,11 +47,16 @@ $(function(){
       $(".lang-menu").css({
         "opacity": "0",
         "height": "0"
+        
+      })
+      $(".lang-menu > ul").delay("slow").css({
+        "height": "0",
+        "overflow": "hidden" 
       })
     });
   });
 
-
+ 
 
   $('.banner-slider').slick({
     dots: true,
