@@ -296,6 +296,120 @@ p {
   background-size: cover;
 }
 
+.translation-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.translation-div {
+  position: relative;
+  padding: 0 0 0 10px;
+}
+.translation-div #langToggle {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain;
+  transition: all 100ms linear;
+  cursor: pointer;
+}
+.translation-div #langToggle.lang_TH {
+  background-image: url(../img/thai_flag.svg);
+}
+.translation-div #langToggle.lang_MS {
+  background-image: url(../img/malay_flag.svg);
+}
+.translation-div #langToggle.lang_ID {
+  background-image: url(../img/indonesia_flag.svg);
+}
+.translation-div #langToggle.lang_VI {
+  background-image: url(../img/vietnam_flag.svg);
+}
+.translation-div .lang-menu {
+  transition: all 140ms ease-in;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  right: 0;
+  top: 45px;
+  width: 214px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.translation-div .lang-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.translation-div .lang-menu ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1B4263;
+  padding: 5px 0;
+}
+.translation-div .lang-menu ul li .country-flag {
+  width: 20px;
+}
+.translation-div .lang-menu ul li .country {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.translation-div .lang-menu ul li .lang-option {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.translation-div .lang-menu ul li .lang-option span {
+  cursor: pointer;
+}
+.translation-div .lang-menu ul li .lang-option span.disable {
+  cursor: not-allowed;
+  color: #9BA9B1;
+}
+.translation-div .lang-menu .close-lang {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 26px;
+  height: 26px;
+  background-color: #878787;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.client-slider-wrapper {
+  padding: 20px 0;
+  width: 100%;
+}
+.client-slider-wrapper .client-logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--skyblue);
+}
+.client-slider-wrapper .slick-next, .client-slider-wrapper .slick-prev {
+  background-image: url(../img/arrow-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.client-slider-wrapper .slick-next.slick-disabled, .client-slider-wrapper .slick-prev.slick-disabled {
+  opacity: 0.5;
+}
+.client-slider-wrapper .slick-next {
+  transform: rotateZ(180deg) translate(0, 12px);
+}
+.client-slider-wrapper .slick-next:before, .client-slider-wrapper .slick-prev:before {
+  font-size: 0;
+}
+
 @font-face {
   font-family: "PingFang SC";
   src: url("./fonts/PingFangSCBold.woff2") format("woff2"), url("./fonts/PingFangSCBold.woff") format("woff"), url("./fonts/PingFangSCBold.ttf") format("truetype");
@@ -330,7 +444,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-  background: rgba(249, 250, 255, 0.1725490196);
+  background: rgba(249, 250, 255, 0.8549019608);
   z-index: 999;
   transition: all 100ms linear;
 }
@@ -705,87 +819,18 @@ a.qr-code-bg {
 .nav-user-login > .timezone {
   flex: 0 100%;
   text-align: right;
-}
-
-.translation-div {
-  position: relative;
-  padding: 0 0 0 20px;
-}
-.translation-div #langToggle {
-  width: 20px;
-  height: 20px;
-  display: block;
-  background-size: contain;
-  transition: all 100ms linear;
-  cursor: pointer;
-}
-.translation-div #langToggle.lang_TH {
-  background-image: url(../img/thai_flag.svg);
-}
-.translation-div #langToggle.lang_MS {
-  background-image: url(../img/malay_flag.svg);
-}
-.translation-div #langToggle.lang_ID {
-  background-image: url(../img/indonesia_flag.svg);
-}
-.translation-div #langToggle.lang_VI {
-  background-image: url(../img/vietnam_flag.svg);
-}
-.translation-div .lang-menu {
-  transition: all 140ms ease-in;
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 14px 18px;
-  right: 0;
-  top: 45px;
-  width: 214px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-}
-.translation-div .lang-menu ul {
-  margin: 0;
-  padding: 0;
-}
-.translation-div .lang-menu ul li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #1B4263;
-  padding: 5px 0;
-}
-.translation-div .lang-menu ul li .country-flag {
-  width: 20px;
-}
-.translation-div .lang-menu ul li .country {
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  padding-bottom: 5px;
 }
-.translation-div .lang-menu ul li .lang-option {
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.translation-div .lang-menu ul li .lang-option span {
-  cursor: pointer;
-}
-.translation-div .lang-menu ul li .lang-option span.disable {
-  cursor: not-allowed;
-  color: #9BA9B1;
-}
-.translation-div .lang-menu .close-lang {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 26px;
-  height: 26px;
-  background-color: #878787;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
+.nav-user-login > .timezone::before {
+  width: 14px;
+  height: 14px;
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/clock.svg);
 }
 
 .account-bar {
@@ -793,6 +838,7 @@ a.qr-code-bg {
   flex-wrap: nowrap;
   gap: 10px;
   align-items: center;
+  justify-content: flex-end;
 }
 .account-bar .user-avatar {
   width: 36px;
@@ -805,6 +851,7 @@ a.qr-code-bg {
 .account-bar .user-balance {
   display: flex;
   flex-wrap: wrap;
+  flex: 0 1 114px;
 }
 .account-bar .user-balance .balance-notif {
   flex: 0 100%;

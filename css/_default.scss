@@ -288,3 +288,122 @@ p{
     background-image: url(../img/bg-white-login.png);
     background-size: cover;
 }
+
+.translation-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.translation-div{
+    position: relative;
+    padding: 0 0 0 10px;
+    #langToggle{
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-size: contain;
+        transition: all 100ms linear;
+        cursor: pointer;
+        &.lang_TH{
+            background-image: url(../img/thai_flag.svg);
+            
+        }
+        &.lang_MS{
+            background-image: url(../img/malay_flag.svg);
+            
+        }
+        &.lang_ID{
+            background-image: url(../img/indonesia_flag.svg);
+            
+        }
+        &.lang_VI{
+            background-image: url(../img/vietnam_flag.svg);
+            
+        }
+    }
+    .lang-menu{
+        transition: all 140ms ease-in;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 14px 18px;
+        right: 0;
+        top: 45px;
+        width: 214px;
+        box-shadow: 0px 3px 6px #00000029;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #1B4263;
+                padding: 5px 0;
+                .country-flag{
+                    width: 20px;
+                }
+                .country{
+                    font-weight: 600;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                }
+                .lang-option{
+                    font-size: 12px;
+                     font-family: Arial, Helvetica, sans-serif;
+                    span{
+                        cursor: pointer;
+                        &.disable{
+                            cursor: not-allowed;
+                            color: #9BA9B1;
+                        }
+                    }
+                }
+            }
+        }
+        .close-lang{
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 26px;
+            height: 26px;
+            background-color: #878787;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.client-slider-wrapper{
+    padding: 20px 0;
+    width: 100%;
+    .client-logo{
+        width: 48px;
+        height: 48px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: var(--skyblue);
+    }
+    .slick-next, .slick-prev{
+        background-image: url(../img/arrow-icon.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .slick-next.slick-disabled, .slick-prev.slick-disabled{
+        opacity: 0.5;
+    }
+    .slick-next{
+        transform: rotateZ(180deg) translate(0,12px);
+    }
+    .slick-next:before, .slick-prev:before{
+        font-size: 0;
+    }
+}

@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPlay818 | Desktop</title>
-    <link rel="icon" type="image/x-icon" href="img/app_icon@2x.png">
-    <meta property="og:image" content="img/app_banner.png">
+    <title>Login | iPlay818 | Mobile</title>
+    <link rel="icon" type="image/x-icon" href="./img/app_icon@2x.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css?v=1.2" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="login-body">
-    <div class="login-wrapper">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo_app2-2@2x.png" width="250" alt=""/>
-            </a>
-        </div>
-        <div class="translation-bar"> 
+<body>
+    <div class="login-body">
+        <div class="translation-bar">
             <div class="translation-div">
                 <div  id="langToggle" role="button" class="lang_MS"></div>
-                <div class="lang-menu" >
+                <div class="lang-menu" style="height: 0px; opacity: 0;">
                     <button class="close-lang">X</button>
                     <ul>
                         <li data-lang="TH">
@@ -72,66 +66,28 @@
                 </div>
             </div>
         </div>
-        <form action="afterlogin.html">
-            <div class="form-group">
-                <span class="form-input-icon"><img src="img/002-user.png" width="20" /></span>
-                <input type="text" class="form-input" placeholder="Username"/>
-            </div>
-            <div class="form-group last-child">
-                <span class="form-input-icon"><img src="img/001-lock.png" width="20" /></span>
-                <input type="password" class="form-input"  placeholder="Password"/>
-            </div>
-            <div class="form-label text-right">
-                <a href="">Forget Password?</a>
-            </div>
-            <input type="submit" class="form-submit" value="Login" />
-            <div class="form-label space-between">
-                <p>先去逛逛</p>
-                <a href="register.html">已有账号？请登录</a>
-            </div>
-        </form>
-        <div class="client-slider-wrapper">
-            <div class="client-slider">
-                <div>
-                    <div class="client-logo"></div>
-                </div>
-                <div>
-                    <div class="client-logo"></div>
-                </div>
-                <div>
-                    <div class="client-logo"></div>
-                </div>
-                <div>
-                    <div class="client-logo"></div>
-                </div>
-                <div>
-                    <div class="client-logo"></div>
-                </div>
-                <div>
-                    <div class="client-logo"></div>
-                </div>
+        <div class="login-wrapper">
+            <a href="register.html"> Register</a>
+            <div class="login-form">
+                <div class="form-title">Login</div>
+                <form action="index.html">
+                    <div class="form-group">
+                        <span class="form-input-icon"><img src="img/002-user.png" width="20" /></span>
+                        <input type="text" class="form-input" placeholder="Username"/>
+                    </div>
+                    <div class="form-group last-child">
+                        <span class="form-input-icon"><img src="img/001-lock.png" width="20" /></span>
+                        <input type="password" class="form-input"  placeholder="Password"/>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
+    </div>    
 
-    
+
     <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="  crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-UnTxHm+zKuDPLfufgEMnKGXDl6fEIjtM+n1Q6lL73ok=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/general.js"></script>
-    <script>
-        $(function(){
-
-            $('.client-slider').slick({
-                dots: false,
-                arrows: true,
-                infinite: false,
-                autoplay: false,
-                autoplaySpeed: 3000,
-                slidesToShow: 4,
-                slidesToScroll: 1
-            });
-        })
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/genera.js"></script>
 </body>
 </html>

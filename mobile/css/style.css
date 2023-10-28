@@ -176,6 +176,57 @@ body {
   font-size: 2.4vw;
 }
 
+.login-body {
+  background-color: #082b3f;
+  background-image: url(../img/login-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  height: 100vh;
+  padding: 5vw;
+}
+.login-body .translation-bar {
+  padding: 5vw 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+.login-body .translation-bar .lang-menu {
+  top: 7vw !important;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+.login-wrapper > a {
+  flex: 0 16vw;
+  background-color: #343233;
+  padding: 8vw;
+  word-break: break-all;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 2vw 0px 0px 2vw;
+}
+.login-wrapper .login-form {
+  flex: 1;
+  padding: 3vw;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 0px 2vw 2vw 0px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+.login-wrapper .login-form .form-title {
+  font-size: 5vw;
+  color: #fff;
+  text-align: center;
+}
+
 @font-face {
   font-family: "PingFang SC";
   src: url("./fonts/PingFangSCBold.woff2") format("woff2"), url("./fonts/PingFangSCBold.woff") format("woff"), url("./fonts/PingFangSCBold.ttf") format("truetype");
@@ -391,7 +442,7 @@ nav .navigation .menu-nav li a > .icon {
   padding: 14px 18px;
   right: 0;
   top: 45px;
-  width: 34vw;
+  width: 38vw;
   z-index: 99;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
