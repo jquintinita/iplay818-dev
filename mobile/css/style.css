@@ -506,7 +506,7 @@ nav .navigation .menu-nav li a::after {
   display: block;
   width: 5vw;
   height: 5vw;
-  background-image: url(/img/icon-arrow.svg);
+  background-image: url(../img/icon-arrow.svg);
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
