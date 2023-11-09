@@ -83,16 +83,17 @@ header{
             }
         }
         .nav-link-group{
-            background-image: url(../img/loginbg.png);
-            width: 158px;
-            height: 46px;
+            width: 168px;
+            height: 56px;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
             color: #fff;
-            > a{
+            position: relative;
+           
+             a{
                 color: #fff;
                 text-decoration: none;
             }
@@ -398,7 +399,7 @@ a{
         flex: 0 100%;
         text-align: right;
         font-size: 14px;
-        padding-bottom: 5px;
+        padding-bottom:0px;
         &::before{
             width: 14px;
             height: 14px;
@@ -478,3 +479,80 @@ a{
         }
     }
 }
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(1turn);
+	}
+}
+
+
+/*// Glow Border Animation //*/
+
+.animated-border-box, .animated-border-box-glow{
+
+    max-width: 158px;
+    max-height: 46px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden; 
+    z-index: 0;
+    /* Border Radius */
+      border-radius: 10px;
+  }
+  
+  .animated-border-box-glow{
+    overflow: hidden;
+    /* Glow Blur */
+    filter: blur(30px);
+  }
+  
+  .animated-border-box:before, .animated-border-box-glow:before {
+    content: '';
+    z-index: -2;
+    text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+      width: 99999px;
+      height: 99999px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    /*border color, change middle color*/
+      background-image: conic-gradient(rgba(63, 233, 255, 0.5), rgba(63, 233, 255, 0.5), rgb(255 63 181 / 50%) 50%);
+    /* change speed here */
+      animation: rotate 4s linear infinite;
+  }
+  
+  .animated-border-box:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    /* border width */
+      left: 5px;
+      top: 5px;
+    /* double the px from the border width left */
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+    /*bg color*/
+    background-image: url(../img/loginbg.png);
+    background-size: inherit;
+    background-position: center;
+    /*box border radius*/
+      border-radius: 7px;
+  }
+  .animated-border-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+  @keyframes rotate {
+      100% {
+          transform: translate(-50%, -50%) rotate(1turn);
+      }
+  }
+  

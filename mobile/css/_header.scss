@@ -123,6 +123,12 @@ nav{
             height: 5vw;
             border: none;
             font-size: 3.75vw; 
+            background-color: #fff;
+            img{
+                width: 85%;
+
+                height: auto;
+            }
         }
         .menu-nav{
             padding: 0;
@@ -141,11 +147,28 @@ nav{
                     flex-wrap: nowrap;
                     align-items: center;
                     gap: 2vw;
+                    position: relative;
+                    text-decoration: none;
                     > .icon{
                         width: 5vw;
                         height: 5vw;
-                        background-color: var(--dark-bluesh);
                         display: inline-block;
+                        > img{
+                            width: 90%;
+                            height: auto; 
+                        }
+                    }
+                    &::after{
+                        display:block;
+                        width: 5vw;
+                        height: 5vw;
+                        background-image: url(/img/icon-arrow.svg);
+                        background-size: 40%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        content: ""; 
+                        position: absolute;
+                        right: 0;
                     }
                 }
             }

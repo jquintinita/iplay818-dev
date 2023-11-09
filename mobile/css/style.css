@@ -465,6 +465,11 @@ nav .navigation button {
   height: 5vw;
   border: none;
   font-size: 3.75vw;
+  background-color: #fff;
+}
+nav .navigation button img {
+  width: 85%;
+  height: auto;
 }
 nav .navigation .menu-nav {
   padding: 0;
@@ -485,12 +490,29 @@ nav .navigation .menu-nav li a {
   flex-wrap: nowrap;
   align-items: center;
   gap: 2vw;
+  position: relative;
+  text-decoration: none;
 }
 nav .navigation .menu-nav li a > .icon {
   width: 5vw;
   height: 5vw;
-  background-color: var(--dark-bluesh);
   display: inline-block;
+}
+nav .navigation .menu-nav li a > .icon > img {
+  width: 90%;
+  height: auto;
+}
+nav .navigation .menu-nav li a::after {
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  background-image: url(/img/icon-arrow.svg);
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  right: 0;
 }
 
 .translation-div {
