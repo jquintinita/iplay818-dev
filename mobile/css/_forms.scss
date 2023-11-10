@@ -19,11 +19,18 @@
             height: 12vw;
             margin-bottom: 4vw;
             gap: 1.5vw;
-         
+            .form-input-icon{
+                width: 6vw;
+                > img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
             input{
                 outline: none;
                 color: #fff;
                 padding: 2vw;
+                font-size: 4vw;
                 &::placeholder{
                     color: #fff;
                 }

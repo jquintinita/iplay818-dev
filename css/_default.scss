@@ -324,11 +324,10 @@ p{
     .lang-menu{
         transition: all 140ms ease-in;
         height: 0;
-        opacity: 0;
+        opacity: 0; 
         position: absolute;
         background-color: #fff;
         border-radius: 12px;
-        padding: 14px 18px;
         right: 0;
         top: 45px;
         width: 214px;

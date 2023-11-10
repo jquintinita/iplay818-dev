@@ -379,6 +379,18 @@ header .header-wrapper .right-menu .login-bar a {
   text-decoration: none;
   color: var(--dark-bluesh);
   font-weight: 900;
+  width: -moz-max-content;
+  width: max-content;
+}
+header .header-wrapper .right-menu .login-bar a.logout:before {
+  width: 3vw;
+  height: 3vw;
+  background-image: url(../img/logout@2x.png);
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  margin-right: 1vw;
 }
 header .header-wrapper .right-menu img {
   height: 5vw;
@@ -545,10 +557,9 @@ nav .navigation .menu-nav li a::after {
   opacity: 0;
   position: absolute;
   background-color: #fff;
-  border-radius: 12px;
-  padding: 2vw 2.5vw;
+  border-radius: 1vw;
   right: 0;
-  top: 45px;
+  top: 6vw;
   width: 50vw;
   z-index: 99;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
@@ -568,6 +579,9 @@ nav .navigation .menu-nav li a::after {
 .translation-div .lang-menu ul li .country-flag {
   width: 5vw;
 }
+.translation-div .lang-menu ul li .country-flag > img {
+  width: 100%;
+}
 .translation-div .lang-menu ul li .country {
   font-weight: 900;
   font-family: "PingFang SC";
@@ -586,10 +600,11 @@ nav .navigation .menu-nav li a::after {
 }
 .translation-div .lang-menu .close-lang {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 26px;
-  height: 26px;
+  top: -0.5vw;
+  right: -0.5vw;
+  font-size: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-color: #878787;
   color: #fff;
   border: none;
@@ -875,10 +890,18 @@ footer .footer-menu .footer-menu-items.active .menu-name, footer .footer-menu .f
   margin-bottom: 4vw;
   gap: 1.5vw;
 }
+.form-div.form-login .form-group .form-input-icon {
+  width: 6vw;
+}
+.form-div.form-login .form-group .form-input-icon > img {
+  width: 100%;
+  height: auto;
+}
 .form-div.form-login .form-group input {
   outline: none;
   color: #fff;
   padding: 2vw;
+  font-size: 4vw;
 }
 .form-div.form-login .form-group input::-moz-placeholder {
   color: #fff;

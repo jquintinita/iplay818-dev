@@ -46,40 +46,53 @@ $(function(){
       });
     
 
-      $("#langToggle").click(function(){
-        var lang;
-        var activeLang;
-        if($(this).hasClass("active")){
-          $(this).removeClass("active");
-          $(".lang-menu").css({
-            "height": "0",
-            "opacity": "0"
-          })
-        }
-        else{
-          $(this).addClass("active");
-          $(".lang-option > span").click(function(){
-            lang = $(this).data("country-lang")
-            console.log("Country-Language: " + lang);
-            console.log("Country: " + lang.split("_")[1]);
-           $("#langToggle").removeClass().addClass("lang_" + lang.split("_")[1])
-          });
+       //LANGUAGE TOGGLE
 
-          $(".lang-menu").css({
-            "height": "auto",
-            "opacity": "1"
-          })
-        }
-
-        $(".close-lang").click(function(){
-          $("#langToggle").removeClass("active");
-          $(".lang-menu").css({
-            "height": "0",
-            "opacity": "0"
-          })
-        });
+      $(".lang-menu > ul").hide();
+       
+  $("#langToggle").click(function(){
+    var lang;
+    var activeLang;
+    if($(this).hasClass("active")){
+      $(this).removeClass("active");
+      $(".lang-menu").css({
+        "height": "0",
+        "padding": "0",
+        "opacity": "0"
+      })
+      $(".lang-menu > ul").hide();
+     
+    }
+    else{
+      $(this).addClass("active");
+      $(".lang-option > span").click(function(){
+        lang = $(this).data("country-lang")
+        console.log("Country-Language: " + lang);
+        console.log("Country: " + lang.split("_")[1]);
+       $("#langToggle").removeClass().addClass("lang_" + lang.split("_")[1])
       });
 
+      $(".lang-menu").css({
+        "height": "auto",
+        "padding": "14px 18px",
+        "opacity": "1"
+      });
+      $(".lang-menu > ul").show().delay("slow").css({
+        "height": "auto",
+        "overflow": "hidden" 
+      })
+    }
+
+    $(".close-lang").click(function(){
+      $("#langToggle").removeClass("active");
+      $(".lang-menu").css({
+        "opacity": "0",
+        "height": "0",
+        "padding": "0"
+      })
+      $(".lang-menu > ul").hide();
+    });
+  });
 
       $(".nav-menu-list > li").hover(function(){
         console.log($(this).attr("data-nav"));

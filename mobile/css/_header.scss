@@ -35,7 +35,19 @@ header{
                     text-decoration: none;
                     color: var(--dark-bluesh);
                     font-weight: 900;
+                    width: max-content;
+                    &.logout:before{
+                        width: 3vw;
+                        height: 3vw;
+                        background-image: url(../img/logout@2x.png);
+                        background-repeat: no-repeat;
+                        content: "";
+                        display: inline-block;
+                        background-size: contain;
+                        margin-right: 1vw;
+                    }
                 }
+                
             }
             img{
                 height: 5vw;
@@ -212,10 +224,9 @@ nav{
         opacity: 0;
         position: absolute;
         background-color: #fff;
-        border-radius: 12px;
-        padding: 2vw 2.5vw;
+        border-radius: 1vw;
         right: 0;
-        top: 45px;
+        top: 6vw;
         width: 50vw;
         z-index: 99;
         box-shadow: 0px 3px 6px #00000029;
@@ -231,6 +242,9 @@ nav{
                 padding: 5px 0;
                 .country-flag{
                     width: 5vw;
+                    > img{
+                        width: 100%;
+                    }
                 }
                 .country{
                     font-weight: 900;
@@ -252,10 +266,11 @@ nav{
         }
         .close-lang{
             position: absolute;
-            top: -5px;
-            right: -5px;
-            width: 26px;
-            height: 26px;
+            top: -0.5vw;
+            right: -0.5vw;
+            font-size: 2vw;
+            width: 5vw;
+            height: 5vw;
             background-color: #878787;
             color: #fff;
             border: none;

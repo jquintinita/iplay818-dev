@@ -7,11 +7,11 @@ $(function(){
     })
   })
 
-  $(".lang-menu > ul").delay("slow").css({
-    "height": "0",
-    "overflow": "hidden" 
-  })
-  //LANGUAGE TOGGLE
+ 
+  $(".lang-menu > ul").hide();
+    
+   //LANGUAGE TOGGLE
+
   $("#langToggle").click(function(){
     var lang;
     var activeLang;
@@ -19,8 +19,10 @@ $(function(){
       $(this).removeClass("active");
       $(".lang-menu").css({
         "height": "0",
+        "padding": "0",
         "opacity": "0"
       })
+      $(".lang-menu > ul").hide();
      
     }
     else{
@@ -34,9 +36,10 @@ $(function(){
 
       $(".lang-menu").css({
         "height": "auto",
+        "padding": "2vw 2.5vw",
         "opacity": "1"
       });
-      $(".lang-menu > ul").delay("slow").css({
+      $(".lang-menu > ul").show().delay("slow").css({
         "height": "auto",
         "overflow": "hidden" 
       })
@@ -46,15 +49,13 @@ $(function(){
       $("#langToggle").removeClass("active");
       $(".lang-menu").css({
         "opacity": "0",
-        "height": "0"
-        
-      })
-      $(".lang-menu > ul").delay("slow").css({
         "height": "0",
-        "overflow": "hidden" 
+        "padding": "0"
       })
+      $(".lang-menu > ul").hide();
     });
   });
+ 
 
  
 
@@ -163,14 +164,14 @@ var windowHeight = $(window).innerHeight();
 
 $(".page-container").css("height", windowHeight - footerHeight);
 
-  function isMobile() {
-    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    return regex.test(navigator.userAgent);
-}
-if (isMobile()) {
+//   function isMobile() {
+//     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+//     return regex.test(navigator.userAgent);
+// }
+// if (isMobile()) {
       
-} else {
-window.location.replace("../");
-}
+// } else {
+// window.location.replace("../");
+// }
     
-})
+ })
